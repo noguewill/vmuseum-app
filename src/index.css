@@ -1,13 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "poppins";
+}
+.strokeYellow {
+  -webkit-text-stroke: 0.7px goldenrod;
+}
+.etherealHeader {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: goldenrod;
+  /*   letter-spacing: 1.7rem; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.dirtGold {
+  color: #946a00;
+}
+/* // Hide short text by default (resolution > 1200px) */
+.full-text {
+  display: none;
+}
+/* makes the menu fullscreen when on small screen devices */
+@media (max-width: 900px) {
+  .fullscreen {
+    width: 100%;
+  }
+  /*   .short-button-text {
+    display: block;
+  }
+  .full-button-text {
+    display: none;
+  } */
+}
+/* // When resolution <= 1200px, hide full text and show short text */
+@media (min-width: 1280px) {
+  .short-text {
+    display: none;
+  }
+  .full-text {
+    display: block;
+  }
 }
