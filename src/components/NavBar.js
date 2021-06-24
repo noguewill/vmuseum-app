@@ -9,7 +9,17 @@ const NavBar = () => {
   const [menuActive, setMenuActive] = useState(false);
   return (
     <>
-      <Menu menuActive={menuActive} />
+      <div className="flex flex-col">
+        <div
+          className={`${
+            !menuActive ? "invisible" : ""
+          } absolute w-80 h-full flex flex-col  bg-gray-300  z-20 self-end fullscreen`}
+        >
+          <ul className=" flex flex-col pt-40  justify-around items-center ">
+            <Menu />
+          </ul>
+        </div>
+      </div>
 
       {/* NAV */}
       <nav

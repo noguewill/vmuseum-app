@@ -3,10 +3,11 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import NFTday from "./components/NFTday";
 import NFTWeekly from "./components/NFTWeekly";
+import About from "./components/About";
 
 const App = () => {
   /* <button><Link to="/NFToftheday">NFT of the day</Link> */
-  const nft = {
+  /*   const nft = {
     nftbronze: {
       nftname: "carapace",
       color: "yellow",
@@ -15,7 +16,7 @@ const App = () => {
       nftname: "marigold",
       color: "blue",
     },
-  };
+  }; */
   return (
     <>
       <Router>
@@ -23,6 +24,7 @@ const App = () => {
         <Switch>
           <Route exact path="/">
             <Home />
+            <About />
           </Route>
           <Route path="/NFToftheday">
             <NFTday />

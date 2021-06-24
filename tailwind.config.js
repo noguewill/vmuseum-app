@@ -6,6 +6,9 @@ module.exports = {
       letterSpacing: {
         widestxl: "0.2rem",
       },
+      colors: {
+        dirtGold: "#946a00",
+      },
     },
   },
   variants: {

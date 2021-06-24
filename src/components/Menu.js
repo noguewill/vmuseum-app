@@ -1,52 +1,65 @@
-import { render } from "@testing-library/react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-const Menu = ({ menuActive }) => {
+
+const Menu = () => {
   const menuObj = [
     {
-      id: ["", "", "", ""],
-      text: ["text", "text", "text", "text"],
-      href: ["/", "About", "nftoftheday", "nftweekly"],
+      text: "Home",
+      href: "/",
+    },
+    {
+      text: "About",
+      href: "/About",
+    },
+    {
+      text: "NFT of the Day",
+      href: "/nftoftheday",
+    },
+    {
+      text: "NFT Weekly",
+      href: "/nftweekly",
     },
   ];
+  /*   const onTitleClick = (index) => {
+    setActiveIndex(index);
+  }; */
   const onTitleClick = (index) => {
     setActiveIndex(index);
+    console.log(index);
   };
   const [activeIndex, setActiveIndex] = useState(null);
 
   const renderedItems = menuObj.map((item, index) => {
-    const active = index === activeIndex ? "active" : "";
+    const active = index === activeIndex ? "bg-dirtGold text-white" : "";
     return (
-      <>
-        <li className="pb-1">
-          <Link to={`${item.href}`}>
+      <React.Fragment key={index}>
+        <li className="pb-1 text-center text-dirtGold">
+          <Link to={item.href}>
             <button
+              id={index}
+              href={item.href}
               onClick={() => onTitleClick(index)}
-              id={`${index}`}
-              className={`${active} p-1.5 rounded text-center hover:bg-indigo-500  transition ease-in-out text-white"`}
+              className={`${active} p-1.5 rounded text-center hover:bg-dirtGold transition ease-in-out  "`}
             >
-              {item.text[0]}
+              {item.text}
             </button>
           </Link>
         </li>
-      </>
+      </React.Fragment>
     );
   });
+
   return (
-    <div className="flex flex-col">
-      <div
-        className={`${
-          !menuActive ? "invisible" : ""
-        } absolute w-80 h-full flex flex-col  bg-gray-300  z-20 self-end fullscreen`}
-      >
-        <ul className="  flex flex-col pt-40  justify-around items-center ">
-          {renderedItems}
-          {/*          <li className="pb-1">
+    <>
+      <li className="pb-1">{renderedItems}</li>
+      {/* <li className="pb-1">
             <Link to="/">
               <button
                 id="mermaid"
-                onClick={(e) => setActiveIndex(e.target.id)}
-                className={` p-1.5 rounded text-center hover:bg-indigo-500  transition ease-in-out text-white"`}
+                onClick={(e) => {
+                  activeButton(e.target.id);
+                }}
+                className={` ${active} p-1.5 rounded text-center hover:bg-indigo-500  transition ease-in-out text-white"`}
               >
                 Home
               </button>
@@ -55,7 +68,11 @@ const Menu = ({ menuActive }) => {
           <li className="pb-1">
             <Link to="/">
               <button
-                className={`   p-1.5 rounded text-center hover:bg-indigo-500  transition ease-in-out`}
+                onClick={(e) => {
+                  setActiveIndex(e.target.id);
+                  activeButton(e.target.id);
+                }}
+                className={`${active} p-1.5 rounded text-center hover:bg-indigo-500  transition ease-in-out`}
               >
                 About us
               </button>
@@ -64,7 +81,12 @@ const Menu = ({ menuActive }) => {
           <li className="pb-1">
             <Link to="/nftoftheday">
               <button
-                className={` p-1.5 rounded text-center hover:bg-indigo-500  transition ease-in-out`}
+                id="yeah"
+                onClick={(e) => {
+                  setActiveIndex(e.target.id);
+                  activeButton(e.target.id);
+                }}
+                className={`${active} p-1.5 rounded text-center hover:bg-indigo-500  transition ease-in-out`}
               >
                 Nft of the day
               </button>
@@ -73,15 +95,17 @@ const Menu = ({ menuActive }) => {
           <li className="pb-5">
             <Link to="/nftweekly">
               <button
-                className={`p-1.5 rounded text-center hover:bg-indigo-500  transition ease-in-out`}
+                onClick={(e) => {
+                  setActiveIndex(e.target.id);
+                  activeButton(e.target.id);
+                }}
+                className={`${active} p-1.5 rounded text-center hover:bg-indigo-500  transition ease-in-out`}
               >
                 NFT Weekly
               </button>
             </Link>
           </li> */}
-        </ul>
-      </div>
-    </div>
+    </>
   );
 };
 
