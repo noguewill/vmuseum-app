@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+import NavBar from "./NavBar";
 const NFTWeekly = ({ nftid }) => {
   return (
     <>
-      <Link to={`/${nftid}`}>
+      <NavBar />
+      {/*       <Link to={`/${nftid}`}>
         <div>I'M A NFT</div>
-      </Link>
+      </Link> */}
     </>
   );
 };

@@ -39,7 +39,7 @@ const Menu = () => {
               id={index}
               href={item.href}
               onClick={() => onTitleClick(index)}
-              className={`${active} p-1.5 rounded text-center hover:bg-dirtGold transition ease-in-out  "`}
+              className={`${active} p-1.5 rounded text-center hover:bg-dirtGold hover:text-white transition ease-in-out  "`}
             >
               {item.text}
             </button>

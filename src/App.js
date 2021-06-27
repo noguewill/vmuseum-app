@@ -6,21 +6,16 @@ import NFTWeekly from "./components/NFTWeekly";
 import About from "./components/About";
 
 const App = () => {
-  /* <button><Link to="/NFToftheday">NFT of the day</Link> */
-  /*   const nft = {
-    nftbronze: {
-      nftname: "carapace",
-      color: "yellow",
+  /*   const themes = [
+    {
+      name: "Ethereal",
+      textColor: "text-black",
+      stroke: "strokeYellow",
     },
-    nftsilver: {
-      nftname: "marigold",
-      color: "blue",
-    },
-  }; */
+  ]; */
   return (
     <>
       <Router>
-        <NavBar />
         <Switch>
           <Route exact path="/">
             <Home />
