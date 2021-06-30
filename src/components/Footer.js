@@ -11,15 +11,15 @@ const Footer = () => {
       </div>
       <div className=" w-full h-full  flex flex-col justify-between items-center pt-2 ">
         <div className="flex flex-col items-center">
-          <h3 className="lg:text-sm text-xs">
+          <h3 className="2xl:text-base lg:text-sm text-xs">
             Send us your <b>NFT</b> entry at:
           </h3>
-          <h3 className="text-lg  font-semibold underline lg:mb-5">
+          <h3 className="2xl:text-xl text-lg  font-semibold underline lg:mb-5">
             <a href="/">nftxpo@gmail.com</a>
           </h3>
         </div>
         <div className=" w-full  flex flex-col  items-center lg:pb-5">
-          <h4 className="lg:mb-2 mb-1 text-sm">find us on:</h4>
+          <h4 className="2xl:text-base lg:mb-2 mb-1 text-sm">find us on:</h4>
           <div className="lg:w-2/6 lg:mb-0 w-4/5 flex justify-around ">
             <a href="">
               <Twitter color={"#946a00"} />
@@ -32,7 +32,7 @@ const Footer = () => {
       </div>
       <div className=" w-full h-full flex justify-end items-end p-2">
         <div className="flex items-center">
-          <h3 className="lg:text-xl lg:mr-2 text-base font-semibold ">
+          <h3 className="lg:text-xl xs:text-base lg:mr-2 text-base font-semibold ">
             back to top
           </h3>
           <svg

@@ -1,5 +1,5 @@
 import NFTdesc from "./NFTdesc";
-import ScrollUp from "./icons/ScrollUp";
+
 import NavBar from "./NavBar";
 
 const NFTday = () => {
@@ -11,7 +11,7 @@ const NFTday = () => {
         textColor={"black"}
         stroke={""}
       />
-      <div className="flex lg:justify-start  justify-center">
+      <div className="flex lg:justify-start  justify-center items-center ">
         <img
           className="absolute w-full h-full object-cover lg:filter lg:blur-sm "
           src="../assets/Narcissus 2.0.jpg"
@@ -19,24 +19,28 @@ const NFTday = () => {
         />
 
         <img
-          className="lg:block left-80 absolute w-3/6 h-full object-contain hidden"
+          className="md:block left-80 absolute 2xl:w-4/6  lg:w-3/6 h-full object-contain hidden"
           src="../assets/Narcissus 2.0.jpg"
           alt="ethereal background"
         />
         <div className=" lg:w-3/6 lg:ml-5  w-full h-screen flex  items-center z-10">
           <div className=" w-auto mb-40 flex flex-col ml-2">
-            <h1 className="text-4xl">Narcissus 2.0</h1>
-            <div className="w-3/5  flex justify-between items-center">
+            <h1 className="2xl:text-5xl text-4xl ">Narcissus 2.0</h1>
+            <div className="w-3/5  flex justify-around items-center">
               <h4 className="font-medium">by</h4>
-              <a target="_blank" href="https://foundation.app/@aurorae">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://foundation.app/@aurorae"
+              >
                 <button
-                  className=" border-yellow-400 border-2 p-0.5 text-yellow-400 bg-white
-                text-lg flex items-center justify-between"
+                  className=" border-yellow-400 2xl:border-3 border-2 p-1 text-yellow-400 bg-white
+                2xl:text-2xl text-lg flex items-center justify-between"
                 >
-                  Aurorae{" "}
+                  Aurorae
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
+                    class="2xl:w-7 w-5 2xl:h-7 h-5"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -52,7 +56,7 @@ const NFTday = () => {
           </div>
         </div>
       </div>
-      <div className="w-full h-8 bg-black text-white flex px-5 justify-between items-center z-10">
+      <div className="w-full h-8 bg-black text-white flex px-5 justify-between items-center z-10 2xl:text-xl">
         <div className="w-auto flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"

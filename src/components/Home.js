@@ -11,25 +11,25 @@ const Home = () => {
         textColor={"white"}
         strokeTheme={"strokeYellow"}
       />
-      <div className="w-full min-h-screen flex items-center justify-center ">
+      <div className="w-full h-auto flex items-center justify-center ">
         <img
-          className="absolute w-full h-screen object-cover "
+          className="absolute w-full h-full object-cover "
           src="../assets/etherealBG.jpg"
           alt="ethereal background"
         />
 
-        <div className=" w-full h-screen flex flex-col justify-between">
+        <div className=" w-full h-screen flex flex-col justify-between ">
           <div className="w-full bg-gray-500 h-7"></div>
           <div className=" w-full   z-10">
             <h4
-              className="lg:widestxl
+              className="2xl:text-2xl lg:widestxl
            text-base font-medium text-center dirtGold tracking-widestxl text-dirtGold"
             >
               THIS WEEK'S THEME:
             </h4>
             <h1
-              className="lg:text-8xl
-          text-6xl font-semibold  text-white text-center tracking-widest  etherealHeader "
+              className="2xl:text-9xl lg:text-8xl
+          text-6xl font-semibold  text-white text-center tracking-widest  etherealHeader  "
             >
               ETHEREAL
             </h1>

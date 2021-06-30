@@ -14,12 +14,12 @@ const About = () => {
         </div>
         <div class="w-full h-full aboutUs_container flex flex-col items-center justify-center">
           {" "}
-          <h1 className="text-2xl mb-3 font-bold">About Us</h1>
-          <p className="font-medium max-w-sm mb-5 ">
+          <h1 className="xl:text-3xl text-2xl mb-3 font-bold">About Us</h1>
+          <p className="2xl:text-2xl 2xl:max-w-lg font-medium max-w-sm mb-5 ">
             NFTXPO is a platform where outstanding NFT art pieces are shown in a
             spotlight giving the NFT artists the deserved spectacle.
           </p>
-          <p className="font-medium max-w-sm ">
+          <p className="2xl:text-2xl 2xl:max-w-lg font-medium max-w-sm ">
             The selection of NFT pieces are made through a filter of
             requirements, and the pieces that algins most towards our criteria,
             are chosen, and then ranked appropiately.
@@ -28,25 +28,25 @@ const About = () => {
 
         <div
           className="lg:flex-row
-        w-full h-full icon_container flex flex-col my-5  items-center"
+        w-full h-full icon_container flex flex-col my-5  items-center  "
         >
           <div
             className="lg:mb-0 lg:order-none lg:flex-row mb-10
-          w-full h-full flex flex-col iconBlock1 order-2"
+          w-full h-full flex flex-col iconBlock1 order-2 "
           >
             <div
               className="lg:ml-8 
-            w-full h-full  flex flex-col  items-center p-5"
+            w-full h-full  flex flex-col  items-center p-5 "
             >
-              <i className="bg-indigo-200 w-20 h-20 mb-8" />
-              <p className="text-sm font-medium max-w-xs">
+              <i className="bg-indigo-200 w-20 h-20 mb-8 " />
+              <p className="2xl:text-lg text-sm font-medium max-w-xs ">
                 <b>1)</b> Selection Pool opens after the theme is announced,
                 NFTXPO starts receiving entries.
               </p>
             </div>
             <div className="w-full  h-full  flex flex-col  items-center p-5">
               <i className="bg-indigo-200 w-20 h-20 mb-8" />
-              <p className="text-sm font-medium max-w-xs">
+              <p className="2xl:text-lg text-sm font-medium max-w-xs">
                 <b>2)</b> NFTXPO chooses the NFTs based on the following
                 criteria:
                 <br />
@@ -76,7 +76,7 @@ const About = () => {
             {" "}
             <div className="w-full h-full  flex flex-col  items-center p-5">
               <i className="bg-indigo-200 w-20 h-20 mb-8" />
-              <p className="text-sm font-medium   max-w-xs">
+              <p className="2xl:text-lg text-sm font-medium   max-w-xs">
                 <b>3)</b> 20 NFTs are chosen from the selection pool, from 20 we
                 filter down to 7 that are chosen to be displayed on the website.
               </p>
@@ -87,7 +87,7 @@ const About = () => {
             >
               <i className=" bg-indigo-200 w-20 h-20 mb-8" />
 
-              <p className="text-sm font-medium  max-w-xs">
+              <p className="2xl:text-lg text-sm font-medium  max-w-xs">
                 <b>4)</b> The discussion of what the theme of next week will be,
                 starts once again.
               </p>

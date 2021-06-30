@@ -14,14 +14,14 @@ const Button = ({ bgImg }) => {
             <img
               className="absolute w-full h-full object-cover  rounded-md p-1"
               src={
-                "https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+                "https://images.unsplash.com/photo-1576502200272-341a4b8d5ebb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
               }
               alt=""
             />
           </div>
           <h2
-            className="absolute lg:text-3xl lg:mb-32 
-             z-10 text-lg lg:block text-white text-center  hidden"
+            className="absolute font-semibold lg:text-2xl lg:mb-32 
+             z-10 text-lg lg:block text-white text-center hidden tracking-widestxl"
           >
             NFT OF THE DAY
           </h2>
@@ -42,20 +42,20 @@ const Button = ({ bgImg }) => {
         >
           <div
             className="lg:w-72 lg:h-52 lg:bg-white lg:border-none
-        absolute w-32 h-28 rounded  border-2 border-white"
+        absolute w-32 h-28 rounded  border-2 border-white "
           >
             <img
               className="absolute w-full h-full object-cover  rounded-md p-1"
               src={
-                "https://images.unsplash.com/photo-1600463046472-73e1ebaf460a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                "https://images.unsplash.com/photo-1601925165391-e5d6552a4e20?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
               }
               alt=""
             />
           </div>
 
           <h2
-            className="absolute lg:text-3xl lg:mb-32 z-10 text-lg lg:block 
-          text-white text-center full-button-text hidden"
+            className="absolute font-semibold lg:text-2xl lg:mb-32 z-10 text-lg lg:block 
+          text-white text-center full-button-text hidden tracking-widestxl"
           >
             NFT WEEKLY
           </h2>

@@ -12,7 +12,7 @@ const NavBar = ({ timer, navColor, strokeTheme, logoColor }) => {
         <div
           className={`${
             !menuActive ? "invisible" : ""
-          } absolute w-80 h-full flex flex-col  bg-gray-300  z-20 self-end fullscreen`}
+          } absolute w-80 h-full flex flex-col  bg-gray-300  z-20 self-end fullscreen 2xl:text-xl`}
         >
           <ul className=" flex flex-col pt-40  justify-around items-center ">
             <Menu />
@@ -21,7 +21,7 @@ const NavBar = ({ timer, navColor, strokeTheme, logoColor }) => {
       </div>
 
       {/* NAV */}
-      <nav className="w-full flex justify-between items-center absolute z-30 px-3 mt-5">
+      <nav className="w-full flex justify-between items-center absolute z-30 2xl:px-10 px-3 mt-5">
         <div className=" w-30">
           <button className="block w-full h-full cursor-pointer ">
             <Logo logoColor={logoColor} stroke={strokeTheme} margin={"ml-3"} />
