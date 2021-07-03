@@ -6,7 +6,7 @@ const Button = ({ bgImg }) => {
      w-full flex  justify-around mb-20  "
     >
       <Link to="/nftoftheday">
-        <button className="lg:mr-96 md:mrlg:mb-10 flex flex-col justify-center items-center">
+        <button className="lg:mr-96 md:mrlg:mb-10 flex flex-col justify-center items-center btn_hover">
           <div
             className="lg:w-72  lg:h-52 lg:bg-white lg:border-none
         absolute w-32 h-28 rounded  border-2 border-white"

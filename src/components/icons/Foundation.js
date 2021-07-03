@@ -1,8 +1,8 @@
-const Foundation = () => {
+const Foundation = ({ iconSize }) => {
   return (
     <>
       <svg
-        className="2xl:w-8 lg:w-15 2xl:h-8 lg:h-15 w-15 h-5"
+        className={iconSize}
         viewBox="0 0 660 284"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

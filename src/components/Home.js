@@ -2,7 +2,7 @@ import Button from "./Button";
 import ScrollUp from "./icons/ScrollUp";
 import NavBar from "./NavBar";
 
-const Home = () => {
+const Home = ({ theme }) => {
   return (
     <>
       <NavBar
@@ -14,8 +14,8 @@ const Home = () => {
       <div className="w-full h-auto flex items-center justify-center ">
         <img
           className="absolute w-full h-full object-cover "
-          src="../assets/etherealBG.jpg"
-          alt="ethereal background"
+          src={theme.themeBG}
+          alt="ethereal theme background"
         />
 
         <div className=" w-full h-screen flex flex-col justify-between ">
@@ -31,7 +31,7 @@ const Home = () => {
               className="2xl:text-9xl lg:text-8xl
           text-6xl font-semibold  text-white text-center tracking-widest  etherealHeader  "
             >
-              ETHEREAL
+              {theme.themeName}
             </h1>
           </div>
 

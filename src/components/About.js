@@ -21,7 +21,7 @@ const About = () => {
           </p>
           <p className="2xl:text-2xl 2xl:max-w-lg font-medium max-w-sm ">
             The selection of NFT pieces are made through a filter of
-            requirements, and the pieces that algins most towards our criteria,
+            requirements, and the pieces that aligns most towards our criteria,
             are chosen, and then ranked appropiately.
           </p>
         </div>
@@ -97,21 +97,21 @@ const About = () => {
       </div>
       {/* About the theme */}
       <div
-        className="lg:flex-row lg:h-screen relative
+        className="lg:flex-row 2xl:h-screen lg:h-screen relative
       w-full h-full  flex flex-col items-center z-10 bg-gray-500"
       >
         <img
-          className="absolute w-full h-full object-cover "
-          src="../assets/etherealBG.jpg"
+          className="absolute w-full h-full object-fill "
+          src="../assets/Subtract.jpg"
           alt="ethereal background"
         />
         <div
-          className=" lg:pr-20
+          className="lg:justify-start 2xl:ml-12 lg:ml-20
           w-3/6 flex  justify-center items-center 
         "
         >
           <h1
-            className="lg:text-8xl 
+            className="2xl:text-9xl lg:text-7xl lg:mt-0 lg:mb-0 
           text-2xl z-10 font-semibold mt-10 -mb-5  "
           >
             ABOUT <br className="lg:block hidden mb-5" />
@@ -122,18 +122,19 @@ const About = () => {
           className=" lg:w-3/6 
         w-full h-full flex flex-col justify-center items-center p-5 z-10"
         >
-          <h2 className="lg:text-7xl text-6xl font-semibold text-white etherealHeader mb-10 z-10">
+          <h2 className="2xl:text-8xl lg:text-7xl text-6xl font-semibold text-white etherealHeader mb-10 z-10">
             THIS WEEK
           </h2>
           <div className="ml-5 z-10 ">
-            <p
-              className="lg:text-left lg:mb-0
+            <i
+              className="2xl:text-2xl lg:text-left lg:mb-0
              text-left mb-0"
             >
-              <i>ethe.re.al \ i-'thir-e-el</i>
-            </p>
+              ethe.re.al \ i-'thir-e-el
+            </i>
+
             <p
-              className="lg:text-2xl  lg:text-left
+              className="2xl:text-4xl 2xl:max-w-3xl lg:text-2xl  lg:text-left
              font-semibold  max-w-lg mb-10"
             >
               Ethereal: the subtlety that encompasses perfection that is
