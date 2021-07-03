@@ -2,6 +2,7 @@ import Instagram from "./icons/Instagram";
 import Twitter from "./icons/Twitter";
 import NFTDescIconContainer from "./NFTDescIconContainer";
 import Footer from "./Footer";
+import Foundation from "./icons/Foundation";
 const NFTdesc = () => {
   return (
     <>
@@ -93,22 +94,21 @@ const NFTdesc = () => {
             <div className="w-full h-full flex justify-between items-center ">
               <div className=" w-50 h-16 flex flex-col justify-center items-center">
                 <a className="2xl:mt-10 lg:mb-2" href="">
-                  <Twitter
-                    color={"gold"}
-                    iconSize={"2xl:w-8 lg:w-6 2xl:h-8 lg:h-6"}
-                  />
+                  <Foundation />
                 </a>
                 <h6 className="2xl:text-base lg:text-xs">at @aurorae</h6>
               </div>
               <div className=" w-50 h-16 flex flex-col justify-center items-center">
                 <a className="2xl:mt-10 lg:mb-2" href="">
-                  <Instagram
+                  <Twitter
                     color={"gold"}
                     iconSize={"2xl:w-8 lg:w-6 2xl:h-8 lg:h-6"}
                   />
                 </a>
+
                 <h6 className="2xl:text-base lg:text-xs">at @realaurorae</h6>
               </div>
+
               <div className=" w-50 h-16 flex flex-col justify-center items-center">
                 <a className="2xl:mt-10 lg:mb-2" href="">
                   <Instagram
@@ -117,6 +117,16 @@ const NFTdesc = () => {
                   />
                 </a>
                 <h6 className="2xl:text-base lg:text-xs">at @realaurorae</h6>
+              </div>
+            </div>
+          </div>
+          <div className="w-11/12   h-auto flex flex-col items-center max-w-md xl:py-0 lg:py-12 ">
+            <div className="w-full h-full flex justify-between items-center ">
+              <div className=" w-50 h-16 flex flex-col justify-center items-center">
+                <a className="2xl:mt-10 lg:mb-2" href="">
+                  <Foundation />
+                </a>
+                <h6 className="2xl:text-base lg:text-xs">at @aurorae</h6>
               </div>
             </div>
           </div>
