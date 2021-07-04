@@ -1,10 +1,7 @@
 import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
-import ImageSlider from "./ImageSlider";
-import { SliderData } from "./SliderData";
-import YeahSlide from "./YeahSlide";
-import { YeahData } from "./YeahData";
+
 const NFTWeekly = ({ nftid }) => {
   return (
     <>
@@ -76,8 +73,7 @@ const NFTWeekly = ({ nftid }) => {
           <span className="2xl:text-lg text-xs">DAY 2</span>
         </div>
       </div>
-      <ImageSlider slides={SliderData} />
-      <YeahSlide slides={YeahData} />
+
       <Footer />
     </>
   );

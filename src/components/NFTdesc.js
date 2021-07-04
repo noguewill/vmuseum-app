@@ -3,6 +3,8 @@ import Twitter from "./icons/Twitter";
 import NFTDescIconContainer from "./NFTDescIconContainer";
 import Footer from "./Footer";
 import Foundation from "./icons/Foundation";
+import ImageSlider from "./ImageSlider";
+import { SliderData } from "./SliderData";
 const NFTdesc = () => {
   return (
     <>
@@ -19,11 +21,8 @@ const NFTdesc = () => {
             <p className="2xl:text-xl lg:text-sm 2xl:max-w-lg lg:max-w-sm">
               <i>
                 "Her own reflection was irresistible, she slowly came closer
-                staring at that pure incarnation <br className="hidden" />
-                of beauty.
-                <br className="hidden" />
-                But she was too close and ended up losing herself in that
-                beautiful reflection".
+                staring at that pure incarnation of beauty. But she was too
+                close and ended up losing herself in that beautiful reflection".
               </i>
             </p>
           </div>
@@ -34,9 +33,9 @@ const NFTdesc = () => {
             <p className="2xl:text-xl lg:text-sm 2xl:max-w-lg lg:max-w-sm ">
               For the realization of Narcissus 2.0, i found inspiration in the
               Greek myth of Narcissus,
-              <br className="2xl:hidden" /> i decided to reinterprate in a
-              modern way <br className="2xl:hidden" />
-              and with a female character.
+              <br className="2xl:hidden block" /> i decided to reinterprate in a
+              modern way and
+              <br /> with a female character.
             </p>
           </div>
           <div className="w-12/12 flex flex-col items-center mb-20">
@@ -48,32 +47,8 @@ const NFTdesc = () => {
         </div>
 
         {/* asset carousel */}
-        <div className="md:w-1/3 w-full h-screen bg-gray-900 flex justify-center items-center">
-          <img
-            className="absolute  md:w-1/3 w-full h-screen object-contain "
-            src="../assets/Work in progress.jpg"
-            alt="ethereal background"
-          />
-          <div className="order-1  z-10 flex flex-col justify-center items-center 2xl:ml-28 ml-20">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="2xl:w-14 2xl:h-14 h-10 w-10  "
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                clipRule="evenodd"
-              />
-            </svg>
-            <span className="2xl:text-base text-xs">next</span>
-          </div>
-          <div className="self-end flex justify-center items-center  ">
-            <h1 className="2xl:text-xl text-white font-light 2xl:mb-10 mb-2 2xl:ml-44 ml-32">
-              Narcissus 2.0 pre-render
-            </h1>
-          </div>
+        <div className="w-1/3  flex flex-col pt-10 justify-center items-center">
+          <ImageSlider slides={SliderData} />
         </div>
 
         {/* right sidebar */}
@@ -95,10 +70,14 @@ const NFTdesc = () => {
           </div>
           <div className="w-8/12   h-auto flex flex-col items-center max-w-md xl:py-0  ">
             <h1 className="2xl:text-5xl lg:text-3xl lg:mb-2">
-              FIND{" "}
-              <a targ="_blank" href="https://linktr.ee/Aurorae_">
+              FIND
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://linktr.ee/Aurorae_"
+              >
                 <span className="headlineGradient">aurorae</span>
-              </a>{" "}
+              </a>
               ON
             </h1>
             <div className="w-full h-full flex justify-between items-center ">
