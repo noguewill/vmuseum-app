@@ -1,7 +1,7 @@
 import Button from "./Button";
 import ScrollUp from "./icons/ScrollUp";
 import NavBar from "./NavBar";
-
+import { Link } from "react-scroll";
 const Home = ({ theme }) => {
   return (
     <>
@@ -11,7 +11,10 @@ const Home = ({ theme }) => {
         textColor={"white"}
         strokeTheme={"strokeYellow"}
       />
-      <div className="w-full h-auto flex items-center justify-center ">
+      <div
+        id="home"
+        className="w-full h-auto flex items-center justify-center "
+      >
         <img
           className="absolute w-full h-full object-cover "
           src={theme.themeBG}
@@ -35,14 +38,16 @@ const Home = ({ theme }) => {
             </h1>
           </div>
 
-          <div className="lg:items-end lg:mr-16 w-full flex flex-col items-center self-center  z-10">
+          <div className="lg:items-end lg:mr-16 w-full flex flex-col items-center self-center cursor-pointer z-10">
             <Button />
-            <div className="flex flex-col w-auto items-center mb-5">
-              <h3 className="lg:text-base text-sm dirtGold tracking-widestxl text-dirtGold">
-                scroll to <b>about</b>
-              </h3>
-              <ScrollUp />
-            </div>
+            <Link to="about" spy={true} smooth={true}>
+              <div className="flex flex-col w-auto items-center mb-5">
+                <h3 className="lg:text-base text-sm  tracking-widestxl text-dirtGold">
+                  scroll to <b>about</b>
+                </h3>
+                <ScrollUp />
+              </div>
+            </Link>
           </div>
         </div>
       </div>

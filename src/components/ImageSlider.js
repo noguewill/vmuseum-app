@@ -19,8 +19,15 @@ const ImageSlider = ({ slides }) => {
     return null;
   }
   const carouselDot = () => {
-    return [...Array(length)].map((index, i) => (
-      <div key={i} className="rounded-full bg-red-100 w-2 h-2"></div>
+    console.log(current);
+
+    return [...Array(length)].map((e, i) => (
+      <div
+        key={i}
+        className={`${
+          current === i ? "bg-yellow-400 " : " "
+        }rounded-full bg-red-100 w-2 h-2`}
+      ></div>
     ));
   };
 
@@ -56,32 +63,34 @@ const ImageSlider = ({ slides }) => {
                 Narcissus 2.0 pre-render
               </h1>
             </div>
+            <div className="2xl:w-1/12 flex justify-between mb-4">
+              {carouselDot()}
+            </div>
           </div>
           {SliderData.map((slide, index) => {
-            <div className="2xl:w-1/12 flex justify-between mb-4">
-              {carouselDot(index)}
-            </div>;
             return (
-              <div
-                className={`${
-                  index === current ? "block" : "hidden"
-                } absolute md:w-1/3 w-full h-full`}
-              >
+              <>
                 <div
                   className={`${
-                    index === current ? "slide active block" : "slide hidden"
-                  } `}
-                  key={index}
+                    index === current ? "block" : ""
+                  } absolute md:w-1/3 w-full h-full`}
                 >
-                  {index === current && (
-                    <img
-                      src={slide.img}
-                      alt="travel "
-                      className="z-10  w-full h-screen object-contain "
-                    />
-                  )}
+                  <div
+                    className={`${
+                      index === current ? "slide active" : "slide "
+                    } `}
+                    key={index}
+                  >
+                    {index === current && (
+                      <img
+                        src={slide.img}
+                        alt="travel "
+                        className="z-10  w-full h-screen object-contain "
+                      />
+                    )}
+                  </div>
                 </div>
-              </div>
+              </>
             );
           })}
         </div>

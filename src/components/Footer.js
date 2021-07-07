@@ -1,8 +1,9 @@
 import Logo from "./icons/Logo";
 import Twitter from "./icons/Twitter";
 import Instagram from "./icons/Instagram";
+import { Link } from "react-scroll";
 
-const Footer = () => {
+const Footer = ({ id }) => {
   return (
     <div className="w-full h-72 flex justify-around items-center  mt-5 px-5">
       <div className="w-full h-full  flex flex-col justify-between">
@@ -34,24 +35,26 @@ const Footer = () => {
         </div>
       </div>
       <div className=" w-full h-full flex justify-end items-end p-2">
-        <div className="flex items-center">
-          <h3 className="2xl:text-2xl lg:text-xl xs:text-base lg:mr-2 text-base font-semibold ">
-            back to top
-          </h3>
-          <svg
-            className="2xl:w-6 2xl:h-6 w-4 h-4"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-            focusable="false"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M3 19h18a1.002 1.002 0 0 0 .823-1.569l-9-13c-.373-.539-1.271-.539-1.645 0l-9 13A.999.999 0 0 0 3 19z"
-              fill="black"
-            />
-          </svg>
-        </div>
+        <Link to={id} spy={true} smooth={true}>
+          <div className="flex items-center cursor-pointer">
+            <h3 className="2xl:text-2xl lg:text-xl xs:text-base lg:mr-2 text-base font-semibold ">
+              back to top
+            </h3>
+            <svg
+              className="2xl:w-6 2xl:h-6 w-4 h-4"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              focusable="false"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M3 19h18a1.002 1.002 0 0 0 .823-1.569l-9-13c-.373-.539-1.271-.539-1.645 0l-9 13A.999.999 0 0 0 3 19z"
+                fill="black"
+              />
+            </svg>
+          </div>
+        </Link>
       </div>
     </div>
   );

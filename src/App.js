@@ -26,6 +26,7 @@ const App = () => {
         <Switch>
           <Route exact path="/">
             <Home theme={theme} />
+
             <About />
           </Route>
           <Route path="/NFToftheday">

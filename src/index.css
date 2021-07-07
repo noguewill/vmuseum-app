@@ -89,3 +89,22 @@ body {
 .btn_hover:hover {
   transform: scale(10rem);
 }
+
+.imgContainer {
+  width: 20rem;
+  height: 20rem;
+}
+
+.imageEl {
+  width: 100%;
+  height: 100%;
+  background-color: black; /* fallback color */
+  background-image: url("https://www.qcterme.com/images/content/2617/backgroundImage/slide-3_content.jpg");
+  background-position: center;
+  background-size: cover;
+  transition: all 0.5s;
+}
+.imgContainer:hover .imageEl,
+.imgContainer:focus .imageEl {
+  transform: scale(1.2);
+}

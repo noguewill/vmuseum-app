@@ -3,9 +3,45 @@ import Logo from "./icons/Logo";
 import Twitter from "./icons/Twitter";
 import Instagram from "./icons/Instagram";
 import Menu from "./Menu";
+import { Link } from "react-scroll";
 
 const NavBar = ({ timer, navColor, strokeTheme, logoColor }) => {
   const [menuActive, setMenuActive] = useState(false);
+  const [hours, setHours] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const [seconds, setseconds] = useState(0);
+
+  function countdownTimeStart() {
+    var countDownDate = new Date("july 8, 2021 15:00:00").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+      // Get todays date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now an the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="demo"
+
+      setHours(hours);
+      setMinutes(minutes);
+      setseconds(seconds);
+
+      // If the count down is over, write some text
+      if (distance < 0) {
+        clearInterval(x);
+      }
+    }, 1000);
+  }
+  countdownTimeStart();
   return (
     <>
       <div className="flex flex-col">
@@ -36,8 +72,9 @@ const NavBar = ({ timer, navColor, strokeTheme, logoColor }) => {
             <b>22</b>H <b>16</b>M
           </h4>
           {/* 1280px or higher */}
-          <h2 className="text-2xl font-medium tracking-widestxl full-text ">
-            TIME UNTIL NEXT NFT DROP: <b>22</b>h <b>16</b>m <b>22</b>s
+          <h2 className="text-2xl font-medium tracking-widestxl full-text  ">
+            TIME UNTIL NEXT NFT DROP: <b>{hours}</b>h <b>{minutes}</b>m{" "}
+            <b>{seconds}</b>s
           </h2>
         </div>
         <ul>
@@ -59,7 +96,7 @@ const NavBar = ({ timer, navColor, strokeTheme, logoColor }) => {
               <button onClick={() => setMenuActive(!menuActive)}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="lg:block lg:w-10 lg:h-10 w-15 h-15 hidden"
+                  className="lg:block lg:w-10 lg:h-10 w-15 h-15 hidden lg:mt-2"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke={`${navColor}`}

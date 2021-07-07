@@ -76,7 +76,7 @@ const NFTdesc = () => {
                 rel="noreferrer"
                 href="https://linktr.ee/Aurorae_"
               >
-                <span className="headlineGradient">aurorae</span>
+                <span className="headlineGradient"> aurorae </span>
               </a>
               ON
             </h1>
