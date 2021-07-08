@@ -73,7 +73,7 @@ const NavBar = ({ timer, navColor, strokeTheme, logoColor }) => {
             <b>22</b>H <b>16</b>M
           </h4>
           {/* 1280px or higher */}
-          <h2 className="text-2xl font-semibold tracking-widestxxl full-text  ">
+          <h2 className="2xl:text-2xl lg:text-xl font-semibold tracking-widestxxl full-text  ">
             TIME UNTIL NEXT NFT DROP: <b>{hours}</b>h <b>{minutes}</b>m{" "}
             <b>{seconds}</b>s
           </h2>
