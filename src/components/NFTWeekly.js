@@ -93,6 +93,7 @@ const NFTWeekly = ({ hours, minutes, seconds }) => {
           </h1>
         </div>
       </div> */}
+
       <NavBar
         timer={"hidden"}
         navColor={"black"}
@@ -181,6 +182,7 @@ const NFTWeekly = ({ hours, minutes, seconds }) => {
                     alt={weeklySlides[current].weeklyImg.alt}
                     className="md:block absolute w-full h-full object-cover hidden "
                   />
+
                   <WeeklyData
                     hours={hours}
                     minutes={minutes}
