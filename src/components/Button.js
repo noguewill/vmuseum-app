@@ -20,8 +20,8 @@ const Button = ({ bgImg }) => {
             />
           </div>
           <h2
-            className="absolute font-semibold lg:text-2xl lg:mb-32 
-             z-10 text-lg lg:block text-white text-center hidden tracking-widestxxl"
+            className="absolute font-semibold lg:text-xl lg:mb-32 
+             z-10 text-lg lg:block text-white text-center hidden 2xl:text-2xl lg:tracking-widestxl "
           >
             NFT OF THE DAY
           </h2>
@@ -54,8 +54,8 @@ const Button = ({ bgImg }) => {
           </div>
 
           <h2
-            className="absolute font-semibold lg:text-2xl lg:mb-32 z-10 text-lg lg:block 
-          text-white text-center full-button-text hidden tracking-widestxxl"
+            className="absolute font-semibold lg:text-xl lg:mb-32 z-10 text-lg lg:block 
+          text-white text-center full-button-text hidden 2xl:text-2xl lg:tracking-widestxl"
           >
             NFT WEEKLY
           </h2>
