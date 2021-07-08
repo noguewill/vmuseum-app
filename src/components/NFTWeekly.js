@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import WeeklyData from "./WeeklyData";
@@ -7,7 +7,14 @@ import React from "react";
 
 const NFTWeekly = () => {
   const [current, setCurrent] = useState(0);
-  const [currentScale, setCurrentScale] = useState("object-none");
+
+  useEffect(() => {
+    effect;
+    return () => {
+      cleanup;
+    };
+  }, [input]);
+
   const weeklySlides = [
     {
       themeData: "etherealWeeklyData",
@@ -62,12 +69,6 @@ const NFTWeekly = () => {
     return null;
   }
 
-  /*   const changeScale = () => {
-    return "object-cover";
-  };
-  const changeScaleAgain = () => {
-    return "object-none";
-  }; */
   return (
     <>
       <NavBar
@@ -77,28 +78,32 @@ const NFTWeekly = () => {
         stroke={""}
       />
 
-      <div className="flex  h-screen items-center ">
-        <div className=" lg:w-3/6 w-auto h-3/6 flex flex-col justify-around items-center z-10 px-10 ">
-          {/* NFT title element */}
-          <div className="self-start">
-            <div className=" w-auto flex flex-col ml-2">
-              <h1 className="2xl:text-6xl text-4xl ">Narcissus 2.0</h1>
-            </div>
-            <div className="2xl:w-3/6 w-3/5 flex justify-around items-center">
-              <h4 className="2xl:text-2xl font-medium ">by</h4>
+      <div className="flex  h-screen items-center noScrollBar ">
+        <div className="z-10 w-4/12 h-full flex flex-col justify-around items-center">
+          <div className="w-full h-2/3 flex flex-col justify-center items-center  ">
+            <h1 className="2xl:text-6xl lg:text-5xl text-4xl lg:mt-32 font-extralight menuItemDisplay">
+              Narcissus 2.0
+            </h1>
+            <div className=" lg:w-96  flex  items-center lg:mt-2">
+              <h4
+                className="2xl:text-2xl 2xl:ml-2 lg:text-lg lg:ml-10 
+               lg:mr-10 font-light"
+              >
+                by
+              </h4>
               <a
                 target="_blank"
                 rel="noreferrer"
                 href="https://foundation.app/@aurorae"
               >
                 <button
-                  className=" border-yellow-400 2xl:border-3 border-2 p-1 text-yellow-400 bg-white
-    2xl:text-2xl text-lg flex items-center justify-between"
+                  className=" border-yellow-400 2xl:border-4  lg:border-3 border-2 pl-3 p-1 text-yellow-400  bg-gray-100
+    2xl:text-4xl lg:text-3xl text-lg flex items-center justify-between font-light"
                 >
                   Aurorae
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="2xl:w-7  w-5 2xl:h-7 h-5"
+                    class="2xl:w-12  w-5 2xl:h-12 h-5"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -111,17 +116,18 @@ const NFTWeekly = () => {
                 </button>
               </a>
             </div>
+
+            {/* <h1 className="lg:text-5xl text-black">Coming Soon...</h1> */}
           </div>
-          {/*  Left Arrow element */}
           <div
-            className={`z-10  flex flex-col items-center 2xl:mb-44 lg:mb-32 ${
-              current === 0 ? "invisible" : ""
-            }`}
+            className={`w-full h-1/3 flex flex-col justify-center ${
+              current === 0 ? "invisible" : "visible"
+            } items-center `}
           >
             <button onClick={prevSlide}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="2xl:w-20 2xl:h-20 h-10 w-10  "
+                className="2xl:w-16 2xl:h-16 h-10 w-10  "
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
@@ -138,6 +144,7 @@ const NFTWeekly = () => {
                 : weeklySlides[current - 1].name}
             </span>
           </div>
+          <div className="w-full h-2/3 "></div>
         </div>
 
         {weeklySlides.map((_, index) => {
@@ -146,14 +153,15 @@ const NFTWeekly = () => {
               {index === current && (
                 <>
                   {/* Show if locked === false else don't */}
+
                   <img
                     src="../assets/etherealBG.jpg"
                     alt={weeklySlides[current].weeklyImg.alt}
-                    className="absolute w-full h-full object-cover lg:filter lg:blur-sm"
+                    className="md:block absolute w-full h-full object-cover hidden lg:filter lg:blur-sm"
                   />
                   <WeeklyData
                     cStyle={
-                      "md:block relative  w-4/5 h-full object-none hidden "
+                      "md:block relative  w-full h-full object-none hidden imageEl"
                     }
                     weeklySlides={weeklySlides}
                     current={current}
@@ -168,7 +176,7 @@ const NFTWeekly = () => {
           <button onClick={nextSlide}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="2xl:w-20 2xl:h-20 h-10 w-10  "
+              className="2xl:w-16 2xl:h-16 h-10 w-10  "
               viewBox="0 0 20 20"
               fill="currentColor"
             >
@@ -180,25 +188,11 @@ const NFTWeekly = () => {
             </svg>
           </button>
           <span className="2xl:text-lg text-xs">
-            {" "}
-            {current === 0
-              ? weeklySlides[current + 1].name
-              : weeklySlides[current + 1].name}
+            {weeklySlides[current + 1].name}
           </span>
         </div>
       </div>
-      <div className="container">
-        <div className="imgContainer overflow-hidden">
-          <div className="imageEl">
-            {/*           <img
-    
-            className={`w-full h-screen absolute ${currentScale} bg-center  bg-cover`}
-            src="../assets/etherealBG.jpg"
-            alt=""
-          /> */}
-          </div>
-        </div>
-      </div>
+
       <Footer />
     </>
   );

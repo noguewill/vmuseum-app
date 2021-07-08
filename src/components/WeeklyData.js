@@ -1,6 +1,6 @@
 const WeeklyData = ({ cStyle, weeklySlides, current }) => {
   return (
-    <div className="w-full h-screen">
+    <div className="w-3/6   h-screen imgContainer overflow-hidden">
       <img
         weeklySlides={weeklySlides}
         src={weeklySlides[current].weeklyImg}
@@ -12,3 +12,6 @@ const WeeklyData = ({ cStyle, weeklySlides, current }) => {
 };
 
 export default WeeklyData;
+<div className="imgContainer overflow-hidden">
+  <div className="imageEl"></div>
+</div>;

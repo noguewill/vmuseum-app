@@ -8,7 +8,7 @@ const Button = ({ bgImg }) => {
       <Link to="/nftoftheday">
         <button className="lg:mr-96 md:mrlg:mb-10 flex flex-col justify-center items-center btn_hover">
           <div
-            className="lg:w-72  lg:h-52 lg:bg-white lg:border-none
+            className="2xl:w-80 lg:w-72  lg:h-52 lg:bg-white lg:border-none
         absolute w-32 h-28 rounded  border-2 border-white"
           >
             <img
@@ -21,7 +21,7 @@ const Button = ({ bgImg }) => {
           </div>
           <h2
             className="absolute font-semibold lg:text-2xl lg:mb-32 
-             z-10 text-lg lg:block text-white text-center hidden tracking-widestxl"
+             z-10 text-lg lg:block text-white text-center hidden tracking-widestxxl"
           >
             NFT OF THE DAY
           </h2>
@@ -41,7 +41,7 @@ const Button = ({ bgImg }) => {
         flex flex-col justify-center items-center  "
         >
           <div
-            className="lg:w-72 lg:h-52 lg:bg-white lg:border-none
+            className="2xl:w-80 lg:w-72 lg:h-52 lg:bg-white lg:border-none
         absolute w-32 h-28 rounded  border-2 border-white "
           >
             <img
@@ -55,7 +55,7 @@ const Button = ({ bgImg }) => {
 
           <h2
             className="absolute font-semibold lg:text-2xl lg:mb-32 z-10 text-lg lg:block 
-          text-white text-center full-button-text hidden tracking-widestxl"
+          text-white text-center full-button-text hidden tracking-widestxxl"
           >
             NFT WEEKLY
           </h2>

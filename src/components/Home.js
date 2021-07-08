@@ -42,7 +42,7 @@ const Home = ({ theme }) => {
             <Button />
             <Link to="about" spy={true} smooth={true}>
               <div className="flex flex-col w-auto items-center mb-5">
-                <h3 className="lg:text-base text-sm  tracking-widestxl text-dirtGold">
+                <h3 className="2xl:text-2xl lg:text-base text-sm  tracking-widestxl text-dirtGold">
                   scroll to <b>about</b>
                 </h3>
                 <ScrollUp />

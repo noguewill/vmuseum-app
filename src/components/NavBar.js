@@ -42,13 +42,14 @@ const NavBar = ({ timer, navColor, strokeTheme, logoColor }) => {
     }, 1000);
   }
   countdownTimeStart();
+
   return (
     <>
-      <div className="flex flex-col">
+      <div className="flex flex-col ">
         <div
           className={`${
-            !menuActive ? "invisible" : ""
-          } absolute w-80 h-full flex flex-col  bg-gray-300  z-20 self-end fullscreen 2xl:text-xl`}
+            !menuActive ? "hidden" : ""
+          } absolute h-screen overflow-hidden flex flex-col  bg-gray-300  z-20 self-end fullscreen 2xl:text-xl menuOpenAnim  `}
         >
           <ul className=" flex flex-col pt-40  justify-around items-center ">
             <Menu />
@@ -72,29 +73,91 @@ const NavBar = ({ timer, navColor, strokeTheme, logoColor }) => {
             <b>22</b>H <b>16</b>M
           </h4>
           {/* 1280px or higher */}
-          <h2 className="text-2xl font-medium tracking-widestxl full-text  ">
+          <h2 className="text-2xl font-semibold tracking-widestxxl full-text  ">
             TIME UNTIL NEXT NFT DROP: <b>{hours}</b>h <b>{minutes}</b>m{" "}
             <b>{seconds}</b>s
           </h2>
         </div>
         <ul>
           {/* Social Media icons */}
-          <div className=" lg:w-40 w-10 h-20 flex justify-between items-center z-30">
+          <div className=" lg:w-44  w-10 h-24 flex justify-between items-center z-30">
             <li>
               <a href="www.instagram.com/nftxpo" className="lg:block hidden">
-                <Instagram color={`${navColor}`} />
+                <Instagram
+                  iconSize={" 2xl:w-6 2xl:h-6 "}
+                  color={`${navColor}`}
+                />
               </a>
             </li>
 
             <li>
               <a href="www.twitter.com/nftxpo" className="lg:block hidden">
-                <Twitter color={`${navColor}`} />
+                <Twitter iconSize={" 2xl:w-6 2xl:h-6 "} color={`${navColor}`} />
               </a>
             </li>
 
             <li>
               <button onClick={() => setMenuActive(!menuActive)}>
-                <svg
+                {!menuActive ? (
+                  <svg
+                    id="ye"
+                    className="lg:block lg:w-10 lg:h-10 hidden lg:mt-2"
+                    viewBox="0 0 120 120"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="hamburgerMenu">
+                      <rect
+                        id="LineBot"
+                        width="40.9091"
+                        height="6"
+                        transform="matrix(-1 0 0 1 108 81)"
+                        fill={`${navColor}`}
+                      />
+                      <rect
+                        id="LineMid"
+                        width="68"
+                        height="6"
+                        transform="matrix(-1 0 0 1 108 57)"
+                        fill={`${navColor}`}
+                      />
+                      <rect
+                        id="LineTop"
+                        width="96"
+                        height="6"
+                        transform="matrix(-1 0 0 1 108 33)"
+                        fill={`${navColor}`}
+                      />
+                    </g>
+                  </svg>
+                ) : (
+                  <svg
+                    className="lg:block lg:w-10 lg:h-10 w-14 h-14 hidden lg:mt-2"
+                    viewBox="0 0 120 120"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="xMenu">
+                      <rect
+                        id="LineRightL"
+                        x="23.9375"
+                        y="91.8198"
+                        width="96"
+                        height="6"
+                        transform="rotate(-45 23.9375 91.8198)"
+                        fill={`${navColor}`}
+                      />
+                      <rect
+                        id="LineLeftR"
+                        width="96"
+                        height="6"
+                        transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 96.0624 91.8198)"
+                        fill={`${navColor}`}
+                      />
+                    </g>
+                  </svg>
+                )}
+                {/* <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="lg:block lg:w-10 lg:h-10 w-15 h-15 hidden lg:mt-2"
                   fill="none"
@@ -111,7 +174,7 @@ const NavBar = ({ timer, navColor, strokeTheme, logoColor }) => {
                         : " M6 18L18 6M6 6l12 12"
                     }`}
                   />
-                </svg>
+                </svg> */}
                 {/* MOBILE */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

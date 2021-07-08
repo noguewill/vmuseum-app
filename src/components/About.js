@@ -156,7 +156,7 @@ const About = () => {
             </i>
 
             <p
-              className="2xl:text-4xl 2xl:max-w-3xl lg:text-2xl  lg:text-left
+              className="2xl:text-3xl 2xl:max-w-3xl lg:text-2xl  lg:text-left
              font-semibold  max-w-lg mb-10"
             >
               Ethereal: the subtlety that encompasses perfection that is
