@@ -12,7 +12,7 @@ const NavBar = ({ timer, navColor, strokeTheme, logoColor }) => {
   const [seconds, setseconds] = useState(0);
 
   function countdownTimeStart() {
-    var countDownDate = new Date("july 8, 2021 15:00:00").getTime();
+    var countDownDate = new Date("july 8, 2021 20:00:00").getTime();
 
     // Update the count down every 1 second
     var x = setInterval(function () {

@@ -5,16 +5,21 @@ import Footer from "./Footer";
 import WeeklyData from "./WeeklyData";
 import React from "react";
 
-const NFTWeekly = () => {
+const NFTWeekly = ({ hours, minutes, seconds }) => {
   const [current, setCurrent] = useState(0);
 
+  /*   const [startTheme, setStartTheme] = useState(0); */
+  /* 
   useEffect(() => {
-    effect;
-    return () => {
-      cleanup;
-    };
-  }, [input]);
+    const waitForHero = setTimeout(() => {
+      setStartTheme('invisible');
+    }, 3000);
 
+    return () => {
+      clearTimeout(waitForHero);
+      setStartTheme(false);
+    };
+  }, []); */
   const weeklySlides = [
     {
       themeData: "etherealWeeklyData",
@@ -71,6 +76,23 @@ const NFTWeekly = () => {
 
   return (
     <>
+      {/*  <div
+        className={`${
+          startTheme ? "z-0" : "z-50"
+        }absolute  w-full h-screen flex justify-center items-center  `}
+      >
+        <div className="w-auto h-auto z-50 flex flex-col font-light tracking-widest themeHeader">
+          <h2 className="2xl:ml-2 2xl:text-3xl text-gray-200 ">
+            WEEK <b className="text-yellow-400 ">1</b>
+          </h2>
+          <h1
+            className="2xl:text-9xl lg:text-8xl
+          text-6xl font-semibold  text-white text-center tracking-widestxxl   etherealHeader  "
+          >
+            ETHEREAL
+          </h1>
+        </div>
+      </div> */}
       <NavBar
         timer={"hidden"}
         navColor={"black"}
@@ -157,12 +179,19 @@ const NFTWeekly = () => {
                   <img
                     src="../assets/etherealBG.jpg"
                     alt={weeklySlides[current].weeklyImg.alt}
-                    className="md:block absolute w-full h-full object-cover hidden lg:filter lg:blur-sm"
+                    className="md:block absolute w-full h-full object-cover hidden "
                   />
                   <WeeklyData
-                    cStyle={
-                      "md:block relative  w-full h-full object-none hidden imageEl"
-                    }
+                    hours={hours}
+                    minutes={minutes}
+                    seconds={seconds}
+                    cStyle={`
+                      md:block relative  w-full h-full object-none hidden ${
+                        !weeklySlides[current].locked
+                          ? "imageEl"
+                          : "filter blur-sm"
+                      }
+                    `}
                     weeklySlides={weeklySlides}
                     current={current}
                   />
