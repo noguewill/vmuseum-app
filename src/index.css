@@ -8,13 +8,19 @@ body {
   padding: 0;
   overflow-x: hidden;
   font-family: "poppins", "sans-serif";
+  outline: none;
 }
 .noScrollBar {
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
 }
-
+input[type="button"] {
+  outline: none;
+}
+input[type="button"]::-moz-focus-inner {
+  border: 0;
+}
 .strokeYellow {
   -webkit-text-stroke: 0.7px goldenrod;
 }

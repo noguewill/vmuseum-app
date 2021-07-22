@@ -11,10 +11,9 @@ const WeeklyData = ({
   return (
     <>
       <Link to="/nftoftheday">
-        <div className="w-auto h-screen imgContainer overflow-hidden flex flex-col slide active">
+        <div className="w-9/12 h-screen imgContainer overflow-hidden flex flex-col slide active">
           <img
             loading="lazy"
-            weeklySlides={weeklySlides}
             src={weeklySlides[current].weeklyImg}
             alt={weeklySlides[current].weeklyImg.alt}
             className={cStyle}

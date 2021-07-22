@@ -24,8 +24,8 @@ const NFTWeekly = ({ hours, minutes, seconds, theme }) => {
   const weeklySlides = [
     {
       themeData: "etherealWeeklyData",
-      name: `${xpoThemes[theme].themeNFTDesc[0].nftTitle}` /* "Narcissus 2.0", */,
-      weeklyImg: `${xpoThemes[theme].themeNFT}` /* "../assets/Narcissus 2.0.jpg", */,
+      name: `${xpoThemes[theme].themeNFTDesc[0].nftTitle}`,
+      weeklyImg: `${xpoThemes[theme].themeNFT}`,
       alt: "Aurora's NFT named \"Narcissus 2.0",
       locked: false,
     },
@@ -37,27 +37,27 @@ const NFTWeekly = ({ hours, minutes, seconds, theme }) => {
     },
     {
       name: "DAY 3",
-      weeklyImg: "../assets/weeklyImgs/hive.jpg",
+      weeklyImg: `${xpoThemes[theme].themePlaceHolderNFT}`,
       locked: true,
     },
     {
       name: "DAY 4",
-      weeklyImg: "../assets/weeklyImgs/hive.jpg",
+      weeklyImg: `${xpoThemes[theme].themePlaceHolderNFT}`,
       locked: true,
     },
     {
       name: "DAY 5",
-      weeklyImg: "../assets/weeklyImgs/hive.jpg",
+      weeklyImg: `${xpoThemes[theme].themePlaceHolderNFT}`,
       locked: true,
     },
     {
       name: "DAY 6",
-      weeklyImg: "../assets/weeklyImgs/hive.jpg",
+      weeklyImg: `${xpoThemes[theme].themePlaceHolderNFT}`,
       locked: true,
     },
     {
       name: "DAY 7",
-      weeklyImg: "../assets/weeklyImgs/hive.jpg",
+      weeklyImg: `${xpoThemes[theme].themePlaceHolderNFT}`,
       locked: true,
     },
   ];
@@ -86,7 +86,7 @@ const NFTWeekly = ({ hours, minutes, seconds, theme }) => {
           <h1 className="text-3xl ml-1 text-white font-light themeItem opacity-0">
             week{" "}
             <b className={`text-${xpoThemes[theme].themeNFTWeeklyNumColor}`}>
-              1
+              {xpoThemes[theme].themeNFTWeeklyNum}
             </b>
           </h1>
           <h1
@@ -102,7 +102,7 @@ const NFTWeekly = ({ hours, minutes, seconds, theme }) => {
   return (
     <>
       <img
-        src={xpoThemes[theme].themeBG} /* "../assets/etherealBG.jpg" */
+        src={xpoThemes[theme].themeBG}
         alt="ye"
         className=" absolute w-full h-full object-cover z-10 "
       />

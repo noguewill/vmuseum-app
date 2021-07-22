@@ -63,7 +63,7 @@ const ImageSlider = ({ theme }) => {
           <div className="w-screen h-screen flex flex-col justify-end items-center">
             <div className="w-full flex justify-center items-center  ">
               <h1 className="2xl:text-xl text-white font-light">
-                {xpoThemes[theme].themeNFTDesc[0].nftAssetTitle}
+                {xpoThemes[theme].themeNFTDesc[0].nftAssetTitle[current]}
               </h1>
             </div>
             <div className="2xl:w-1/12 flex justify-between mb-4">

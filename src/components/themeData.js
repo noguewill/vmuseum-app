@@ -38,6 +38,7 @@ const xpoThemes = [
     themeNFTSliderDotColor: "yellow-400",
     themeMenuBGColor: "white",
     themeNFTWeeklyNumColor: "yellow-400",
+    themeNFTWeeklyNum: "1",
     themeNFTWeeklyArrowColor: "black",
 
     /* End of coloring  */
@@ -52,7 +53,7 @@ const xpoThemes = [
     themeLatinName: "ethe.re.al | 'i-'thir-e-el",
     themeAboutDesc:
       "Ethereal: the subtlety that encompasses perfection that is incompatible with reality; it's out of this world, impossible to reach, it's celestial perfection, not belonging to the humans, it's soft and immaterial, delicate and beautiful.",
-    themeNFT: "../assets/etherealAssets/etherealNFT.jpg",
+    themeNFT: "../assets/etherealAssets/narci2.jpg",
     themePlaceHolderNFT: "../assets/etherealAssets/etherealNFTPlaceholder.jpg",
     themeNFTArtistBtn: "../assets/etherealAssets/etherealBtn.png",
     themeNFTArtistBtnArrow: "../assets/etherealAssets/etherealBtnArrow.png",
@@ -136,8 +137,10 @@ const xpoThemes = [
     themeNFTDescSlideBGColor: "black",
     themeNFTSliderDotColor: "pink-400",
     themeMenuBGColor: "white",
-    themeNFTWeeklyNumColor: "AB5B5C",
+    themeNFTWeeklyNumColor: "pink-400",
+    themeNFTWeeklyNum: "2",
     themeNFTWeeklyArrowColor: "black",
+    themeNFTAssetName: ["Front-view", "Side-view"],
 
     /* End of coloring  */
     themeLogo: "../assets/dreamAssets/dreamLogoAbout.png",
@@ -151,7 +154,7 @@ const xpoThemes = [
     themeLatinName: "dream | 'drem",
     themeAboutDesc:
       "Dream: the the complexity of the unconscious images that encapsulates the abstact, alien and somehow familiar world of haziness and blurred memories that we inhabit every single night; dreams are fog, doubts , meanings, cravings.",
-    themeNFT: "../assets/dreamAssets/dreamsNFT.png",
+    themeNFT: "../assets/dreamAssets/dreamsNFTy.png",
     themePlaceHolderNFT: "../assets/dreamAssets/dreamsNFTPlaceholder.png",
     themeNFTArtistBtn: "../assets/dreamAssets/dreamsNFTBtn.png",
     themeNFTArtistBtnArrow: "../assets/dreamAssets/dreamsNFTBtnArrow.png",
@@ -163,9 +166,6 @@ const xpoThemes = [
       },
       {
         img: "../assets/dreamAssets/dreamsNFTAsset2.png",
-      },
-      {
-        img: "../assets/dreamAssets/dreamsNFTAsset3.png",
       },
     ],
     themeNFTDesc: [
@@ -184,7 +184,7 @@ const xpoThemes = [
         artistName: "aeforia",
         artistNameTitle: "../assets/dreamAssets/dreamsArtistName.png",
         nftTitle: "INTRICACY",
-        nftAssetTitle: "Side View",
+        nftAssetTitle: ["Face view", "Side View"],
         socialMediaIcon: {
           function() {
             return (
