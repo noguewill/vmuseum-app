@@ -1,16 +1,8 @@
 const ScrollUp = () => {
   return (
     <>
-      {/*       <svg
-        width="24"
-        height="20"
-        viewBox="0 0 24 20"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M12 0L23.2583 19.5L0.74167 19.5L12 0Z" fill="black" />
-      </svg> */}
       <svg
+        className="arrowDown"
         width="24"
         height="20"
         viewBox="0 0 20 19"

@@ -1,15 +1,27 @@
 import Button from "./Button";
-import ScrollUp from "./icons/ScrollUp";
 import NavBar from "./NavBar";
-import { Link } from "react-scroll";
-const Home = ({ theme }) => {
+import { Link as Scroll } from "react-scroll";
+
+const Home = ({ xpoThemes, theme, setTheme }) => {
+  const changeTheme = () => {
+    if (theme < 3) {
+      console.log(theme);
+      setTheme(theme + 1);
+    } else if (theme === 3) {
+      console.log("shit");
+      setTheme((theme = 0));
+    }
+  };
+
   return (
     <>
       <NavBar
-        logoColor={"white"}
-        navColor={"#946a00"}
-        textColor={"white"}
-        strokeTheme={"strokeYellow"}
+        logoColor={`${xpoThemes[theme].themeHomeLogoColor}`}
+        navColor={`${xpoThemes[theme].themeHomeNavbarColor}`}
+        textColor={`${xpoThemes[theme].themeHomeNavbarColor}`}
+        strokeTheme={`${xpoThemes[theme].themeHomeLogoStroke}`}
+        xpoThemes={xpoThemes}
+        theme={theme}
       />
       <div
         id="home"
@@ -17,37 +29,56 @@ const Home = ({ theme }) => {
       >
         <img
           className="absolute w-full h-full object-cover "
-          src={theme.themeBG}
+          src={xpoThemes[theme].themeBG}
           alt="ethereal theme background"
         />
 
         <div className=" w-full h-screen flex flex-col justify-between ">
-          <div className="w-full bg-gray-500 h-7"></div>
+          <div className="w-full  h-7"></div>
           <div className=" w-full   z-10">
             <h4
-              className="2xl:text-2xl lg:widestxl
-           text-base font-medium text-center dirtGold tracking-widestxl text-dirtGold"
+              className={`2xl:text-2xl lg:widestxl
+           text-base font-medium text-center dirtGold tracking-widestxl text-white ${xpoThemes[theme].themeSubStrokeColor}`}
             >
               THIS WEEK'S THEME:
             </h4>
             <h1
-              className="2xl:text-9xl lg:text-8xl
-          text-6xl font-semibold  text-white text-center tracking-widest  etherealHeader  "
+              className={`2xl:text-9xl lg:text-8xl
+          text-6xl font-semibold  text-white text-center tracking-widest ${xpoThemes[theme].themeStrokeColor}`}
             >
-              {theme.themeName}
+              <button
+                className={`${xpoThemes[theme].themeStrokeColor} `}
+                onClick={() => changeTheme()}
+              >
+                {xpoThemes[theme].themeName}
+              </button>
             </h1>
           </div>
 
-          <div className="lg:items-end lg:mr-16 w-full flex flex-col items-center self-center cursor-pointer z-10">
-            <Button />
-            <Link to="about" spy={true} smooth={true}>
-              <div className="flex flex-col w-auto items-center mb-5">
-                <h3 className="2xl:text-2xl lg:text-base text-sm  tracking-widestxl text-dirtGold">
+          <div className="bg-black lg:items-end lg:mr-16 w-full flex lg:flex-row flex-col justify-center items-center self-center cursor-pointer z-10">
+            <Button xpoThemes={xpoThemes} theme={theme} />
+            <Scroll className="w-1/6" to="about" spy={true} smooth={true}>
+              <div className="bg-indigo-400 flex flex-col lg:w-auto w-full h-full items-center mb-5 arrowContainerDown ">
+                <h3
+                  className={`2xl:text-2xl lg:text-base text-sm   w-full tracking-widestxl text-${xpoThemes[theme].themeMainColor}`}
+                >
                   scroll to <b>about</b>
                 </h3>
-                <ScrollUp />
+                <svg
+                  className="arrowDown "
+                  width="24"
+                  height="20"
+                  viewBox="0 0 20 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.8825 18.3441C10.5061 19.0503 9.49389 19.0503 9.1175 18.3441L0.391283 1.97032C0.0362952 1.30422 0.518995 0.5 1.27378 0.5L18.7262 0.499998C19.481 0.499998 19.9637 1.30422 19.6087 1.97032L10.8825 18.3441Z"
+                    fill={`${xpoThemes[theme].themeHomeScrollColor}`}
+                  />
+                </svg>
               </div>
-            </Link>
+            </Scroll>
           </div>
         </div>
       </div>

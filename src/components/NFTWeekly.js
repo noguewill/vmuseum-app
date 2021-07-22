@@ -1,36 +1,37 @@
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import WeeklyData from "./WeeklyData";
 import React from "react";
+import xpoThemes from "./themeData";
 
-const NFTWeekly = ({ hours, minutes, seconds }) => {
+const NFTWeekly = ({ hours, minutes, seconds, theme }) => {
   const [current, setCurrent] = useState(0);
 
-  /*   const [startTheme, setStartTheme] = useState(0); */
-  /* 
+  const [startTheme, setStartTheme] = useState(true);
+
   useEffect(() => {
     const waitForHero = setTimeout(() => {
-      setStartTheme('invisible');
-    }, 3000);
+      setStartTheme(false);
+    }, 4000);
 
     return () => {
       clearTimeout(waitForHero);
       setStartTheme(false);
     };
-  }, []); */
+  }, []);
+
   const weeklySlides = [
     {
       themeData: "etherealWeeklyData",
-      name: "Narcissus 2.0",
-      weeklyImg: "../assets/Narcissus 2.0.jpg",
+      name: `${xpoThemes[theme].themeNFTDesc[0].nftTitle}` /* "Narcissus 2.0", */,
+      weeklyImg: `${xpoThemes[theme].themeNFT}` /* "../assets/Narcissus 2.0.jpg", */,
       alt: "Aurora's NFT named \"Narcissus 2.0",
       locked: false,
     },
     {
       name: "DAY 2",
-      weeklyImg: "../assets/weeklyImgs/hive.jpg",
+      weeklyImg: `${xpoThemes[theme].themePlaceHolderNFT}`,
       alt: "Aurora's NFT named \"Narcissus 2.0",
       locked: true,
     },
@@ -67,50 +68,74 @@ const NFTWeekly = ({ hours, minutes, seconds }) => {
   };
 
   const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
+    setCurrent(current === length - 2 ? 0 : current + 1);
   };
-
+  console.log(current);
   if (!Array.isArray(weeklySlides) || weeklySlides.length <= 0) {
     return null;
   }
 
-  return (
-    <>
-      {/*  <div
-        className={`${
-          startTheme ? "z-0" : "z-50"
-        }absolute  w-full h-screen flex justify-center items-center  `}
+  const bgLoad = () => {
+    return (
+      <div
+        className={`w-screen h-screen absolute flex flex-col justify-center items-center z-40 ${
+          startTheme ? "" : "hidden"
+        }`}
       >
-        <div className="w-auto h-auto z-50 flex flex-col font-light tracking-widest themeHeader">
-          <h2 className="2xl:ml-2 2xl:text-3xl text-gray-200 ">
-            WEEK <b className="text-yellow-400 ">1</b>
-          </h2>
+        <div className="w-auto self-center z-10 ">
+          <h1 className="text-3xl ml-1 text-white font-light themeItem opacity-0">
+            week{" "}
+            <b className={`text-${xpoThemes[theme].themeNFTWeeklyNumColor}`}>
+              1
+            </b>
+          </h1>
           <h1
-            className="2xl:text-9xl lg:text-8xl
-          text-6xl font-semibold  text-white text-center tracking-widestxxl   etherealHeader  "
+            className={`2xl:text-9xl lg:text-8xl
+    text-6xl font-semibold  text-white text-center tracking-widest ${xpoThemes[theme].themeStrokeColor} themeHeader opacity-0 `}
           >
-            ETHEREAL
+            {xpoThemes[theme].themeName}
           </h1>
         </div>
-      </div> */}
+      </div>
+    );
+  };
+  return (
+    <>
+      <img
+        src={xpoThemes[theme].themeBG} /* "../assets/etherealBG.jpg" */
+        alt="ye"
+        className=" absolute w-full h-full object-cover z-10 "
+      />
+
+      {bgLoad()}
 
       <NavBar
         timer={"hidden"}
-        navColor={"black"}
-        textColor={"black"}
-        stroke={""}
+        navColor={`${xpoThemes[theme].themeHomeNavbarColor}`}
+        textColor={`${xpoThemes[theme].themeHomeNavbarColor}`}
+        xpoThemes={xpoThemes}
+        theme={theme}
       />
-
-      <div className="flex  h-screen items-center noScrollBar ">
+      <div
+        className={`flex  h-screen items-center   ${
+          startTheme ? "invisible" : "visible"
+        }`}
+      >
         <div className="z-10 w-4/12 h-full flex flex-col justify-around items-center">
-          <div className="w-full h-2/3 flex flex-col justify-center items-center  ">
-            <h1 className="2xl:text-6xl lg:text-5xl text-4xl lg:mt-32 font-extralight menuItemDisplay">
-              Narcissus 2.0
+          <div className="w-full h-2/3 flex flex-col justify-center items-center  px-5 ">
+            <h1
+              className={`2xl:text-6xl lg:text-5xl text-4xl lg:mt-32 font-extralight text-center text-${
+                xpoThemes[theme].themeHomeNavbarColor
+              } opacity-0 ${!startTheme ? "themeItem" : ""}`}
+            >
+              {weeklySlides[0].name}
             </h1>
             <div className=" lg:w-96  flex  items-center lg:mt-2">
               <h4
-                className="2xl:text-2xl 2xl:ml-2 lg:text-lg lg:ml-10 
-               lg:mr-10 font-light"
+                className={`2xl:text-2xl 2xl:ml-2 lg:text-lg lg:ml-12 text-${
+                  xpoThemes[theme].themeHomeNavbarColor
+                }
+               lg:mr-10 font-light opacity-0 ${!startTheme ? "themeItem" : ""}`}
               >
                 by
               </h4>
@@ -120,22 +145,23 @@ const NFTWeekly = ({ hours, minutes, seconds }) => {
                 href="https://foundation.app/@aurorae"
               >
                 <button
-                  className=" border-yellow-400 2xl:border-4  lg:border-3 border-2 pl-3 p-1 text-yellow-400  bg-gray-100
-    2xl:text-4xl lg:text-3xl text-lg flex items-center justify-between font-light"
+                  className={`flex w-auto items-center justify-center arrowContainerRight opacity-0  ${
+                    !startTheme ? "themeItem" : ""
+                  }`}
                 >
-                  Aurorae
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="2xl:w-12  w-5 2xl:h-12 h-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                      clip-rule="evenodd"
+                  <img
+                    className=" 2xl:w-72  2xl:h-20 lg:w-56 lg:h-16 lg:-mr-9 -mr-12
+                    arrowContainerRight"
+                    src={xpoThemes[theme].themeNFTArtistBtn}
+                    alt="Artist's NFT platform redirect button"
+                  />
+                  <div>
+                    <img
+                      className="2xl:w-5 w-5 2xl:h-7 h-5 arrowRight "
+                      src={xpoThemes[theme].themeNFTArtistBtnArrow}
+                      alt="button arrow"
                     />
-                  </svg>
+                  </div>
                 </button>
               </a>
             </div>
@@ -150,9 +176,9 @@ const NFTWeekly = ({ hours, minutes, seconds }) => {
             <button onClick={prevSlide}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="2xl:w-16 2xl:h-16 h-10 w-10  "
+                className={`2xl:w-16 2xl:h-16 h-10 w-10 arrowLeft text-${xpoThemes[theme].themeNFTWeeklyArrowColor}`}
                 viewBox="0 0 20 20"
-                fill="currentColor"
+                fill={`${xpoThemes[theme].themeNFTWeeklyArrowColor} `}
               >
                 <path
                   fillRule="evenodd"
@@ -161,7 +187,9 @@ const NFTWeekly = ({ hours, minutes, seconds }) => {
                 />
               </svg>
             </button>
-            <span className="2xl:text-lg text-xs">
+            <span
+              className={`2xl:text-lg text-xs text-${xpoThemes[theme].themeNFTWeeklyArrowColor}`}
+            >
               {current === 0
                 ? weeklySlides[current].name
                 : weeklySlides[current - 1].name}
@@ -177,22 +205,18 @@ const NFTWeekly = ({ hours, minutes, seconds }) => {
                 <>
                   {/* Show if locked === false else don't */}
 
-                  <img
-                    src="../assets/etherealBG.jpg"
-                    alt={weeklySlides[current].weeklyImg.alt}
-                    className="md:block absolute w-full h-full object-cover hidden "
-                  />
-
                   <WeeklyData
                     hours={hours}
                     minutes={minutes}
                     seconds={seconds}
                     cStyle={`
-                      md:block relative  w-full h-full object-none hidden ${
-                        !weeklySlides[current].locked
-                          ? "imageEl"
-                          : "filter blur-sm"
-                      }
+                      md:block relative  w-full h-full object-none hidden z-20 opacity-0 ${
+                        !startTheme ? "themeItem" : ""
+                      } ${
+                      !weeklySlides[current].locked
+                        ? "imageEl"
+                        : "filter blur-sm"
+                    }
                     `}
                     weeklySlides={weeklySlides}
                     current={current}
@@ -203,13 +227,17 @@ const NFTWeekly = ({ hours, minutes, seconds }) => {
           );
         })}
 
-        <div className="z-10 w-4/12 h-full flex flex-col justify-center items-center">
+        <div
+          className={`z-10 w-4/12 h-full flex flex-col justify-center items-center opacity-0 ${
+            !startTheme ? "themeItem" : ""
+          }`}
+        >
           <button onClick={nextSlide}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="2xl:w-16 2xl:h-16 h-10 w-10  "
+              className="2xl:w-16 2xl:h-16 h-10 w-10 arrowRight "
               viewBox="0 0 20 20"
-              fill="currentColor"
+              fill={xpoThemes[theme].themeNFTWeeklyArrowColor}
             >
               <path
                 fillRule="evenodd"
@@ -218,13 +246,14 @@ const NFTWeekly = ({ hours, minutes, seconds }) => {
               />
             </svg>
           </button>
-          <span className="2xl:text-lg text-xs">
+          <span
+            className={`2xl:text-lg text-xs text-${xpoThemes[theme].themeNFTWeeklyArrowColor}`}
+          >
             {weeklySlides[current + 1].name}
           </span>
         </div>
       </div>
-
-      <Footer />
+      <Footer xpoThemes={xpoThemes} theme={theme} />
     </>
   );
 };

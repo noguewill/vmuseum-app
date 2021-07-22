@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { SliderData } from "./SliderData";
-
+import React from "react";
+import xpoThemes from "./themeData";
 import RightArrow from "./icons/RightArrow";
 
-const ImageSlider = ({ slides }) => {
+const ImageSlider = ({ theme }) => {
   const [current, setCurrent] = useState(0);
-  const length = slides.length;
+  const length = xpoThemes[theme].nftAssets.length;
 
   const prevSlide = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
@@ -15,18 +15,19 @@ const ImageSlider = ({ slides }) => {
     setCurrent(current === length - 1 ? 0 : current + 1);
   };
 
-  if (!Array.isArray(slides) || slides.length <= 0) {
+  if (
+    !Array.isArray(xpoThemes[theme].nftAssets) ||
+    xpoThemes[theme].nftAssets.length <= 0
+  ) {
     return null;
   }
   const carouselDot = () => {
-    console.log(current);
-
-    return [...Array(length)].map((e, i) => (
+    return [...Array(length)].map((_, i) => (
       <div
         key={i}
         className={`${
-          current === i ? "bg-yellow-400 " : " "
-        }rounded-full bg-red-100 w-2 h-2`}
+          current === i ? `bg-${xpoThemes[theme].themeNFTSliderDotColor}` : " "
+        } rounded-full bg-red-100 lg:mx-1 w-2 h-2`}
       ></div>
     ));
   };
@@ -34,13 +35,15 @@ const ImageSlider = ({ slides }) => {
   return (
     <>
       {/*   <div className="md:w-1/3 w-full h-screen bg-gray-900 flex justify-center items-center"> */}
-      <div className="bg-gray-900 w-full h-auto flex flex-col ">
+      <div
+        className={`bg-${xpoThemes[theme].themeNFTDescSlideBGColor} w-full h-auto flex flex-col `}
+      >
         <div className=" flex">
           <div className=" z-10 flex flex-col justify-center items-center ">
             <button onClick={prevSlide}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="2xl:w-14 2xl:h-14 h-10 w-10 z-10"
+                className="2xl:w-14 2xl:h-14 h-10 w-10 z-10 arrowLeft"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
@@ -60,16 +63,16 @@ const ImageSlider = ({ slides }) => {
           <div className="w-screen h-screen flex flex-col justify-end items-center">
             <div className="w-full flex justify-center items-center  ">
               <h1 className="2xl:text-xl text-white font-light">
-                Narcissus 2.0 pre-render
+                {xpoThemes[theme].themeNFTDesc[0].nftAssetTitle}
               </h1>
             </div>
             <div className="2xl:w-1/12 flex justify-between mb-4">
               {carouselDot()}
             </div>
           </div>
-          {SliderData.map((slide, index) => {
+          {xpoThemes[theme].nftAssets.map((slide, index) => {
             return (
-              <>
+              <React.Fragment key={index}>
                 <div
                   className={`${
                     index === current ? "block" : ""
@@ -83,6 +86,7 @@ const ImageSlider = ({ slides }) => {
                   >
                     {index === current && (
                       <img
+                        loading="lazy"
                         src={slide.img}
                         alt="travel "
                         className="z-10  w-full h-screen object-contain "
@@ -90,7 +94,7 @@ const ImageSlider = ({ slides }) => {
                     )}
                   </div>
                 </div>
-              </>
+              </React.Fragment>
             );
           })}
         </div>

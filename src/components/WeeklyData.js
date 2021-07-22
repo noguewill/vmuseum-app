@@ -1,4 +1,4 @@
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const WeeklyData = ({
   cStyle,
@@ -11,8 +11,9 @@ const WeeklyData = ({
   return (
     <>
       <Link to="/nftoftheday">
-        <div className="w-auto h-screen imgContainer overflow-hidden flex flex-col ">
+        <div className="w-auto h-screen imgContainer overflow-hidden flex flex-col slide active">
           <img
+            loading="lazy"
             weeklySlides={weeklySlides}
             src={weeklySlides[current].weeklyImg}
             alt={weeklySlides[current].weeklyImg.alt}

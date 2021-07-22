@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
+import xpoThemes from "./themeData";
 
-const Menu = () => {
+const Menu = ({ theme }) => {
   const menuObj = [
     {
       text: "Home",
@@ -25,23 +25,26 @@ const Menu = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const renderedItems = menuObj.map((item, index) => {
-    const active = index === activeIndex ? "bg-dirtGold text-white" : "";
+    const active =
+      index === activeIndex
+        ? `"bg-${xpoThemes[theme].themeMainColor} text-${xpoThemes[theme].themeMainColor}"`
+        : "";
     return (
       <React.Fragment key={index}>
-        {/* <li className="2xl:pb-5 pb-1 text-center flex flex-col  text-dirtGold menuItem 2xl:justify-around"> */}
-        <li className="pb-1 text-center text-dirtGold">
-          <Link to={item.href}>
-            <button
-              id={index}
-              href={item.href}
-              onClick={() => onTitleClick(index)}
-              className={`${active} p-1.5 rounded text-center hover:bg-dirtGold hover:text-white transition ease-in-out  "`}
-            >
-              {/* className={`${active}  2xl:text-2xl   text-center hover:underline pb-1 px-5 hover:text-dirtGold transition ease font-light tracking-widestxxl"`} */}
-              {item.text}
-            </button>
-          </Link>
-        </li>
+        {/* <li className="pb-1 text-center text-dirtGold "> */}
+        <Link
+          to={item.href}
+          className={`2xl:pb-5 pb-1 text-center flex flex-col  text-${xpoThemes[theme].themeMainColor} menuItem 2xl:justify-around`}
+        >
+          <button
+            id={index}
+            href={item.href}
+            onClick={() => onTitleClick(index)}
+            className={`${active}  2xl:text-2xl   text-center hover:underline pb-1 px-5 hover:text-${xpoThemes[theme].themeMainColor} transition ease font-light tracking-widestxxl"`}
+          >
+            {item.text}
+          </button>
+        </Link>
       </React.Fragment>
     );
   });

@@ -1,33 +1,48 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Logo from "./icons/Logo";
 import Twitter from "./icons/Twitter";
 import Instagram from "./icons/Instagram";
 import Menu from "./Menu";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 
-const NavBar = ({ timer, navColor, strokeTheme, logoColor }) => {
+const NavBar = ({
+  timer,
+  navColor,
+  strokeTheme,
+  logoColor,
+  xpoThemes,
+  theme,
+}) => {
   const [menuActive, setMenuActive] = useState(false);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setseconds] = useState(0);
 
+  useEffect(() => {
+    countdownTimeStart();
+  }, []);
   function countdownTimeStart() {
-    var countDownDate = new Date("july 8, 2021 20:00:00").getTime();
+    var today = new Date();
+    var dayOfMonth = today.getUTCDate();
+    const countDownDate = new Date(
+      `july ${dayOfMonth}, 2021 15:00:00`
+    ).getTime();
 
     // Update the count down every 1 second
-    var x = setInterval(function () {
+    setInterval(function () {
       // Get todays date and time
-      var now = new Date().getTime();
+      const now = new Date().getTime();
 
       // Find the distance between now an the count down date
-      var distance = countDownDate - now;
+      /* const distance = countDownDate - now; */
+      const distance = countDownDate - now;
 
       // Time calculations for days, hours, minutes and seconds
-      var hours = Math.floor(
+      const hours = Math.floor(
         (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
       );
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       // Output the result in an element with id="demo"
 
@@ -36,12 +51,11 @@ const NavBar = ({ timer, navColor, strokeTheme, logoColor }) => {
       setseconds(seconds);
 
       // If the count down is over, write some text
-      if (distance < 0) {
-        clearInterval(x);
+      if (distance <= 0) {
+        dayOfMonth++;
       }
     }, 1000);
   }
-  countdownTimeStart();
 
   return (
     <>
@@ -49,19 +63,28 @@ const NavBar = ({ timer, navColor, strokeTheme, logoColor }) => {
         <div
           className={`${
             !menuActive ? "hidden" : ""
-          } absolute h-screen overflow-hidden flex flex-col  bg-gray-300  z-20 self-end fullscreen 2xl:text-xl menuOpenAnim  `}
+          } absolute h-screen overflow-hidden flex flex-col  bg-${
+            xpoThemes[theme].themeMenuBGColor
+          } bg-opacity-70 z-20 self-end fullscreen 2xl:text-xl menuOpenAnim  `}
         >
           <ul className=" flex flex-col pt-40  justify-around items-center ">
-            <Menu />
+            <Menu xpoThemes={xpoThemes} theme={theme} />
           </ul>
         </div>
       </div>
 
       {/* NAV */}
-      <nav className="w-full flex justify-between items-center absolute z-30 2xl:px-10 px-3 mt-5">
+      <nav className="w-full flex justify-between items-center absolute z-30 2xl:px-10 px-3 mt-5 lg:px-8">
         <div className=" w-30">
           <button className="block w-full h-full cursor-pointer ">
-            <Logo logoColor={logoColor} stroke={strokeTheme} margin={"ml-3"} />
+            <Link to="/">
+              <div
+                className={`lg:text-4xl flex flex-col justify-center text-2xl font-semibold text-${logoColor} ${strokeTheme}`}
+              >
+                <h2 className={`-mb-3 `}>NFT</h2>
+                <h2>XPO</h2>
+              </div>
+            </Link>
           </button>
         </div>
         <div

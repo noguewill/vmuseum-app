@@ -3,7 +3,7 @@ import Twitter from "./icons/Twitter";
 import Instagram from "./icons/Instagram";
 import { Link } from "react-scroll";
 
-const Footer = ({ id }) => {
+const Footer = ({ id, xpoThemes, theme }) => {
   return (
     <div className="w-full h-72 flex justify-around items-center  mt-5 px-5">
       <div className="w-full h-full  flex flex-col justify-between">
@@ -22,12 +22,15 @@ const Footer = ({ id }) => {
         <div className=" w-full  flex flex-col  items-center lg:pb-5">
           <h4 className="2xl:text-base lg:mb-2 mb-1 text-sm">find us on:</h4>
           <div className="lg:w-2/6 lg:mb-0 w-4/5 flex justify-around ">
-            <a href="" className="">
-              <Twitter color={"#946a00"} iconSize={"2xl:w-7 2xl:h-7 w-6 h-6"} />
+            <a href="https://instagram.com/__.ilariia">
+              <Twitter
+                color={`${xpoThemes[theme].themeFooterIconColor}`}
+                iconSize={"2xl:w-7 2xl:h-7 w-6 h-6"}
+              />
             </a>
-            <a href="">
+            <a href="https://instagram.com/__.ilariia">
               <Instagram
-                color={"#946a00"}
+                color={`${xpoThemes[theme].themeFooterIconColor}`}
                 iconSize={"2xl:w-7 2xl:h-7 w-6 h-6"}
               />
             </a>
@@ -36,12 +39,14 @@ const Footer = ({ id }) => {
       </div>
       <div className=" w-full h-full flex justify-end items-end p-2">
         <Link to={id} spy={true} smooth={true}>
-          <div className="flex items-center cursor-pointer">
-            <h3 className="2xl:text-2xl lg:text-xl xs:text-base lg:mr-2 text-base font-semibold ">
+          <div className="flex items-center cursor-pointer arrowContainer">
+            <h3
+              className={`2xl:text-2xl lg:text-xl xs:text-base lg:mr-2 text-base font-semibold text-${xpoThemes[theme].themeAccentColor[0]} `}
+            >
               back to top
             </h3>
             <svg
-              className="2xl:w-6 2xl:h-6 w-4 h-4"
+              className="2xl:w-6 2xl:h-6 w-4 h-4 arrowUp"
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
               focusable="false"
@@ -50,7 +55,7 @@ const Footer = ({ id }) => {
             >
               <path
                 d="M3 19h18a1.002 1.002 0 0 0 .823-1.569l-9-13c-.373-.539-1.271-.539-1.645 0l-9 13A.999.999 0 0 0 3 19z"
-                fill="black"
+                fill={`${xpoThemes[theme].themeFooterIconColor} `}
               />
             </svg>
           </div>

@@ -3,7 +3,7 @@ const RightArrow = () => {
     <>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="2xl:w-14 2xl:h-14 h-10 w-10"
+        className="2xl:w-14 2xl:h-14 h-10 w-10 arrowRight"
         viewBox="0 0 20 20"
         fill="currentColor"
       >
