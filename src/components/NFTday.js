@@ -68,7 +68,7 @@ const NFTday = ({ theme }) => {
         </div>
       </div>
       <div
-        className={`w-full 2xl:h-12 h-8 bg-${xpoThemes[theme].themeNFTODBGCryptoColor} text-${xpoThemes[theme].themeNFTODPriceColor} flex px-5 justify-between items-center z-10 2xl:text-xl`}
+        className={`w-full 2xl:h-12 h-8 bg-black text-${xpoThemes[theme].themeNFTODPriceColor} flex px-5 justify-between items-center z-10 2xl:text-xl`}
       >
         <div className="w-auto flex items-center">
           <svg
