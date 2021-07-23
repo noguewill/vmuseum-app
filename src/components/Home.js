@@ -46,12 +46,12 @@ const Home = ({ xpoThemes, theme, setTheme }) => {
               className={`2xl:text-9xl lg:text-8xl
               text-6xl font-semibold  text-white text-center tracking-widest ${xpoThemes[theme].themeStrokeColor}   `}
             >
-              <button
+              {/*               <button
                 className={`${xpoThemes[theme].themeStrokeColor} `}
                 onClick={() => changeTheme()}
-              >
-                {xpoThemes[theme].themeName}
-              </button>
+              > */}
+              {xpoThemes[theme].themeName}
+              {/*    </button> */}
             </h1>
           </div>
 

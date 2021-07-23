@@ -84,8 +84,8 @@ const NFTWeekly = ({ hours, minutes, seconds, theme }) => {
       >
         <div className="w-auto self-center z-10 ">
           <h1 className="text-3xl ml-1 text-white font-light themeItem opacity-0">
-            week{" "}
-            <b className={`text-yellow-400`}>
+            week
+            <b className={`text-yellow-400 ml-1`}>
               {xpoThemes[theme].themeNFTWeeklyNum}
             </b>
           </h1>
@@ -163,7 +163,7 @@ const NFTWeekly = ({ hours, minutes, seconds, theme }) => {
                       />
                       <div>
                         <img
-                          className="2xl:w-5 w-5 2xl:h-7 h-5 arrowRight "
+                          className="2xl:w-5 w-9/12 2xl:h-7 h-auto arrowRight "
                           src={xpoThemes[theme].themeNFTArtistBtnArrow}
                           alt="button arrow"
                         />

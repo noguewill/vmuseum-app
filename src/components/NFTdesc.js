@@ -4,7 +4,7 @@ import NFTDescIconContainer from "./NFTDescIconContainer";
 import Footer from "./Footer";
 import Foundation from "./icons/Foundation";
 import ImageSlider from "./ImageSlider";
-import { SliderData } from "./SliderData";
+
 import xpoThemes from "./themeData";
 const NFTdesc = ({ theme }) => {
   return (

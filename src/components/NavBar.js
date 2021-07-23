@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Logo from "./icons/Logo";
+
 import Twitter from "./icons/Twitter";
 import Instagram from "./icons/Instagram";
 import Menu from "./Menu";
@@ -23,7 +23,7 @@ const NavBar = ({
   }, []);
   function countdownTimeStart() {
     var today = new Date();
-    var dayOfMonth = today.getUTCDate();
+    var dayOfMonth = today.getUTCDate() + 1;
     const countDownDate = new Date(
       `july ${dayOfMonth}, 2021 15:00:00`
     ).getTime();
@@ -51,7 +51,10 @@ const NavBar = ({
       setseconds(seconds);
 
       // If the count down is over, write some text
-      if (distance <= 0) {
+      if (distance === 0) {
+        setHours(hours);
+        setMinutes(minutes);
+        setseconds(seconds);
         dayOfMonth++;
       }
     }, 1000);

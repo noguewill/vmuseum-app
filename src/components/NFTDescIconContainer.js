@@ -3,40 +3,39 @@ const NFTDescIconContainer = ({ theme }) => {
   return (
     <div className="w-full h-full flex justify-between items-center xl:max-w-lg">
       <div className=" 2xl:w-44 lg:w-20 flex flex-col justify-between items-center">
-        <a className="mb-2" href="">
-          <svg
-            className="w-9 h-9"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-            focusable="false"
-            width="1em"
-            height="1em"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 24 24"
-          >
-            <g fill="none">
-              <path
-                d="M4 4v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.342a2 2 0 0 0-.602-1.43l-4.44-4.342A2 2 0 0 0 13.56 2H6a2 2 0 0 0-2 2z"
-                stroke={xpoThemes[theme].themeNFTDescToolIconColor}
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M14 2v4a2 2 0 0 0 2 2h4"
-                stroke={xpoThemes[theme].themeNFTDescToolIconColor}
-                strokeWidth="2"
-                strokeLinejoin="round"
-              />
-            </g>
-          </svg>
-        </a>
+        <svg
+          className="w-9 h-9 mb-2"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          focusable="false"
+          width="1em"
+          height="1em"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 24 24"
+        >
+          <g fill="none">
+            <path
+              d="M4 4v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.342a2 2 0 0 0-.602-1.43l-4.44-4.342A2 2 0 0 0 13.56 2H6a2 2 0 0 0-2 2z"
+              stroke={xpoThemes[theme].themeNFTDescToolIconColor}
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M14 2v4a2 2 0 0 0 2 2h4"
+              stroke={xpoThemes[theme].themeNFTDescToolIconColor}
+              strokeWidth="2"
+              strokeLinejoin="round"
+            />
+          </g>
+        </svg>
+
         <h6 className="text-xs 2xl:text-lg">Pen & Paper</h6>
       </div>
       <div className=" 2xl:w-44  lg:w-20 flex flex-col justify-between items-center">
-        <a className="mb-2" href="">
+        <a className="mb-2" href="https://www.blender.org/about/">
           <svg
-            className="w-9 h-9"
+            className="w-9 h-9 "
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
             focusable="false"
@@ -56,7 +55,10 @@ const NFTDescIconContainer = ({ theme }) => {
         <h6 className="text-xs 2xl:text-lg">Blender 3D</h6>
       </div>
       <div className=" 2xl:w-44 lg:w-20 flex flex-col justify-between items-center">
-        <a className="mb-2" href="">
+        <a
+          className="mb-2"
+          href="https://www.adobe.com/products/photoshop.html"
+        >
           <svg
             className="w-9 h-9"
             xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +76,7 @@ const NFTDescIconContainer = ({ theme }) => {
         <h6 className="text-xs 2xl:text-lg">Photoshop</h6>
       </div>
       <div className=" 2xl:w-44 lg:w-20 flex flex-col justify-between items-center">
-        <a className="mb-2" href="">
+        <a className="mb-2" href="https://lightroom.adobe.com/">
           <svg
             className="w-9 h-9"
             xmlns="http://www.w3.org/2000/svg"

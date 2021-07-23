@@ -12,7 +12,7 @@ const WeeklyData = ({
     <>
       {/* If the x element is locked, do not re-route to nftoftheday */}
       {/*       {!weeklySlides[current].locked ?  */}
-      <Link to="/nftoftheday">
+      <Link to={!weeklySlides[current].locked ? "/nftoftheday" : "#"}>
         <div className="w-9/12 h-screen imgContainer overflow-hidden flex flex-col justify-center items-center  active">
           <img
             loading="lazy"

@@ -7,7 +7,12 @@ const Footer = ({ id, xpoThemes, theme }) => {
   return (
     <div className="w-full h-72 flex justify-around items-center  mt-5 px-5">
       <div className="w-full h-full  flex flex-col justify-between">
-        <Logo textColor={"text-black"} stroke={""} margin={"ml-1"} />
+        <div
+          className={` lg:text-4xl w-2/12 flex flex-col justify-center items-center text-2xl font-semibold text-black`}
+        >
+          <h2 className={`-mb-3 `}>NFT</h2>
+          <h2>XPO</h2>
+        </div>
         <h4 className="text-sm font-light"> © NFTXPO 2021</h4>
       </div>
       <div className=" w-full h-full  flex flex-col justify-around items-center pt-10 ">

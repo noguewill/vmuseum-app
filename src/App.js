@@ -15,7 +15,7 @@ const App = () => {
 
   function countdownTimeStart() {
     var today = new Date();
-    var dayOfMonth = today.getUTCDate();
+    var dayOfMonth = today.getUTCDate() + 1;
     const countDownDate = new Date(
       `july ${dayOfMonth}, 2021 15:00:00`
     ).getTime();
@@ -45,6 +45,9 @@ const App = () => {
       // If the count down is over, write some text
       if (distance <= 0) {
         dayOfMonth++;
+        setHours(hours);
+        setMinutes(minutes);
+        setseconds(seconds);
       }
     }, 1000);
   }
