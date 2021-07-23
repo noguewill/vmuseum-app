@@ -210,8 +210,6 @@ const NFTWeekly = ({ hours, minutes, seconds, theme }) => {
             <React.Fragment key={index}>
               {index === current && (
                 <>
-                  {/* Show if locked === false else don't */}
-
                   <WeeklyData
                     hours={hours}
                     minutes={minutes}
