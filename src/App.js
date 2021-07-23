@@ -53,7 +53,7 @@ const App = () => {
     countdownTimeStart();
     const loader = setTimeout(() => {
       setLoading(false);
-    }, 3100);
+    }, 4000);
     return () => {
       clearTimeout(loader);
     };
