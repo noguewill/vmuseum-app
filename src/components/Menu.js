@@ -34,7 +34,7 @@ const Menu = ({ theme }) => {
         {/* <li className="pb-1 text-center text-dirtGold "> */}
         <Link
           to={item.href}
-          className={`2xl:pb-5 pb-1 text-center flex flex-col  ${xpoThemes[theme].themeMainColor} menuItem 2xl:justify-around`}
+          className={`2xl:pb-5 pb-1 text-center flex flex-col  text-yellow-800 menuItem 2xl:justify-around`}
         >
           <button
             id={index}
