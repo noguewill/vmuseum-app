@@ -59,9 +59,6 @@ const App = () => {
     };
   }, []);
 
-  /*  const dYeah = [...theme]; */
-  console.log(theme + 1);
-
   return (
     <>
       {loading ? (
