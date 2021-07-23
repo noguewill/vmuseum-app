@@ -26,7 +26,7 @@ const ImageSlider = ({ theme }) => {
       <div
         key={i}
         className={`${
-          current === i ? `bg-${xpoThemes[theme].themeNFTSliderDotColor}` : " "
+          current === i ? `bg-yellow-400` : " "
         } rounded-full bg-red-100 lg:mx-1 w-2 h-2`}
       ></div>
     ));
@@ -35,9 +35,7 @@ const ImageSlider = ({ theme }) => {
   return (
     <>
       {/*   <div className="md:w-1/3 w-full h-screen bg-gray-900 flex justify-center items-center"> */}
-      <div
-        className={`bg-${xpoThemes[theme].themeNFTDescSlideBGColor} w-full h-auto flex flex-col `}
-      >
+      <div className={`bg-black  w-full h-auto flex flex-col `}>
         <div className=" flex">
           <div className=" z-10 flex flex-col justify-center items-center ">
             <button onClick={prevSlide}>
