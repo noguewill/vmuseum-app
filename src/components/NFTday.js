@@ -86,8 +86,7 @@ const NFTday = ({ theme }) => {
           </svg>
           <h3>
             Price
-            <span className={`text-${xpoThemes[theme].themeNFTODCryptoColor}`}>
-              {" "}
+            <span className={`text-yellow-400`}>
               {xpoThemes[theme].themeNFTPriceCrypto}
             </span>
             <span className="font-light">

@@ -16,7 +16,7 @@ const Footer = ({ id, xpoThemes, theme }) => {
             Send us your <b>NFT</b> entry at:
           </h3>
           <h3 className="2xl:text-2xl text-lg  font-semibold underline ">
-            <a href="/">nftxpo@gmail.com</a>
+            <a href="mailto:nftxpo@gmail.com">nftxpo@gmail.com</a>
           </h3>
         </div>
         <div className=" w-full  flex flex-col  items-center lg:pb-5">
@@ -28,7 +28,7 @@ const Footer = ({ id, xpoThemes, theme }) => {
                 iconSize={"2xl:w-7 2xl:h-7 w-6 h-6"}
               />
             </a>
-            <a href="https://instagram.com/__.ilariia">
+            <a href="https://www.instagram.com/nftxpo/">
               <Instagram
                 color={`${xpoThemes[theme].themeFooterIconColor}`}
                 iconSize={"2xl:w-7 2xl:h-7 w-6 h-6"}

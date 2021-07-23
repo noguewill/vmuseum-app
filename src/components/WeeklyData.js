@@ -10,8 +10,10 @@ const WeeklyData = ({
 }) => {
   return (
     <>
+      {/* If the x element is locked, do not re-route to nftoftheday */}
+      {/*       {!weeklySlides[current].locked ?  */}
       <Link to="/nftoftheday">
-        <div className="w-9/12 h-screen imgContainer overflow-hidden flex flex-col slide active">
+        <div className="w-9/12 h-screen imgContainer overflow-hidden flex flex-col justify-center items-center  active">
           <img
             loading="lazy"
             src={weeklySlides[current].weeklyImg}
@@ -21,7 +23,7 @@ const WeeklyData = ({
 
           {weeklySlides[current].locked ? (
             <>
-              <div className="w-1/3 h-screen flex flex-col justify-center items-center z-20 absolute text-white ">
+              <div className="w-1/3 h-screen flex flex-col justify-center items-center z-20 absolute text-white slide active">
                 <h1 className="2xl:text-6xl 2xl:mb-10">
                   {weeklySlides[current].name}
                 </h1>

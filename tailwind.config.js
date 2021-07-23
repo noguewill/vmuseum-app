@@ -7,7 +7,6 @@ module.exports = {
         widestxl: "0.2rem",
       },
       colors: {
-        etherealGold: "#946a00",
         natureGreen: "#319900",
         natureSoftGreen: "#58993a",
         natureHardGreen: "#274d16",

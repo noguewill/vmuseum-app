@@ -85,7 +85,7 @@ const NFTWeekly = ({ hours, minutes, seconds, theme }) => {
         <div className="w-auto self-center z-10 ">
           <h1 className="text-3xl ml-1 text-white font-light themeItem opacity-0">
             week{" "}
-            <b className={`text-${xpoThemes[theme].themeNFTWeeklyNumColor}`}>
+            <b className={`text-yellow-400`}>
               {xpoThemes[theme].themeNFTWeeklyNum}
             </b>
           </h1>
@@ -124,7 +124,7 @@ const NFTWeekly = ({ hours, minutes, seconds, theme }) => {
         <div className="z-10 w-5/12 h-full flex flex-col justify-around items-center">
           <div className="w-full h-2/3 flex flex-col justify-center items-center  lg:pr-20">
             {weeklySlides[current].locked ? (
-              <h1 className="lg:text-5xl text-black  lg:mt-32 2xl:px-40 lg:px-20">
+              <h1 className="lg:text-5xl font-light text-black lg:mt-32 2xl:px-40 lg:px-20">
                 Coming Soon...
               </h1>
             ) : (

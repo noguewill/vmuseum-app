@@ -16,7 +16,7 @@ const About = ({ xpoThemes, theme }) => {
         <div className="w-full h-full aboutUs_container flex flex-col items-center justify-center">
           {" "}
           <h1
-            className={`xl:text-3xl text-2xl mb-3 font-bold text-${xpoThemes[theme].themeAboutUsColor}`}
+            className={`xl:text-3xl text-2xl mb-3 font-bold ${xpoThemes[theme].themeAboutUsColor}`}
           >
             About Us
           </h1>
@@ -47,9 +47,9 @@ const About = ({ xpoThemes, theme }) => {
                 autoPlay
                 loop
                 muted
-                className=" w-20 object-cover h-20 mb-8 z-40"
+                className=" w-24 object-cover h-24 mb-8 z-40"
               >
-                <source src="../assets/ratingIcon_1.mp4" type="video/mp4" />
+                <source src="../assets/mailIcon.mp4" type="video/mp4" />
               </video>
 
               <p className="2xl:text-lg text-sm font-medium max-w-xs ">
@@ -58,11 +58,19 @@ const About = ({ xpoThemes, theme }) => {
               </p>
             </div>
             <div className="w-full  h-full  flex flex-col  items-center p-5">
-              <img
+              <video
+                autoPlay
+                loop
+                muted
+                className=" w-20 object-cover h-20 mb-8 z-40"
+              >
+                <source src="../assets/filterIcon.mp4" type="video/mp4" />
+              </video>
+              {/*               <img
                 src="../assets/processIcon.png"
                 alt="ye"
                 className=" w-20 h-20 mb-8"
-              />
+              /> */}
               <p className="2xl:text-lg text-sm font-medium max-w-xs">
                 <b>2)</b> NFTXPO chooses the NFTs based on the following
                 criteria:
@@ -81,7 +89,7 @@ const About = ({ xpoThemes, theme }) => {
           >
             <h2
               className={`lg:mt-0
-            font-semibold text-2xl mt-16 mb-5 text-${xpoThemes[theme].themeAboutUsColor}`}
+            font-semibold text-2xl mt-16 mb-5 ${xpoThemes[theme].themeAboutUsColor}`}
             >
               Our Process
             </h2>
@@ -92,11 +100,19 @@ const About = ({ xpoThemes, theme }) => {
           >
             {" "}
             <div className="w-full h-full  flex flex-col  items-center p-5">
-              <img
+              <video
+                autoPlay
+                loop
+                muted
+                className=" w-20 object-cover h-20 mb-8 z-40"
+              >
+                <source src="../assets/ratingIcon.mp4" type="video/mp4" />
+              </video>
+              {/*               <img
                 src="../assets/ratingIcon.png"
                 alt="ye"
                 className=" w-20 h-20 mb-8"
-              />
+              /> */}
               <p className="2xl:text-lg text-sm font-medium   max-w-xs">
                 <b>3)</b> 20 NFTs are chosen from the selection pool, from 20 we
                 filter down to 7 that are chosen to be displayed on the website.
@@ -106,11 +122,19 @@ const About = ({ xpoThemes, theme }) => {
               className="lg:mr-8 
             w-full h-full  flex flex-col  items-center p-5"
             >
-              <img
+              <video
+                autoPlay
+                loop
+                muted
+                className=" w-20 object-cover h-20 mb-8 z-40"
+              >
+                <source src="../assets/meetIcon.mp4" type="video/mp4" />
+              </video>
+              {/*               <img
                 src="../assets/meetIcon.png"
                 alt="ye"
                 className=" w-20 h-20 mb-8"
-              />
+              /> */}
 
               <p className="2xl:text-lg text-sm font-medium  max-w-xs">
                 <b>4)</b> The discussion of what the theme of next week will be,

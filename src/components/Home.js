@@ -38,13 +38,13 @@ const Home = ({ xpoThemes, theme, setTheme }) => {
           <div className=" w-full   z-10">
             <h4
               className={`2xl:text-2xl lg:widestxl
-           text-base font-medium text-center dirtGold tracking-widestxl text-${xpoThemes[theme].themeMainColor} `}
+           text-base font-medium text-center dirtGold tracking-widestxl ${xpoThemes[theme].themeMainColor} `}
             >
               THIS WEEK'S THEME:
             </h4>
             <h1
               className={`2xl:text-9xl lg:text-8xl
-              text-6xl font-semibold  text-white text-center tracking-widest ${xpoThemes[theme].themeStrokeColor} themeHeader opacity-0 `}
+              text-6xl font-semibold  text-white text-center tracking-widest ${xpoThemes[theme].themeStrokeColor}   `}
             >
               <button
                 className={`${xpoThemes[theme].themeStrokeColor} `}
@@ -65,7 +65,7 @@ const Home = ({ xpoThemes, theme, setTheme }) => {
             >
               <div className="flex flex-col lg:w-auto w-full h-full items-center mb-5 arrowContainerDown ">
                 <h3
-                  className={`2xl:text-2xl lg:text-base text-sm  text-center w-full tracking-widestxl text-${xpoThemes[theme].themeMainColor}`}
+                  className={`2xl:text-2xl lg:text-base text-sm  text-center w-full tracking-widestxl ${xpoThemes[theme].themeMainColor}`}
                 >
                   scroll to <b>about</b>
                 </h3>

@@ -285,3 +285,7 @@ input[type="button"]::-moz-focus-inner {
     opacity: 1;
   }
 }
+
+.etherealGold {
+  color: #946a00;
+}
