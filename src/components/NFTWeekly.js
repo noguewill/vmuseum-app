@@ -121,53 +121,60 @@ const NFTWeekly = ({ hours, minutes, seconds, theme }) => {
           startTheme ? "invisible" : "visible"
         }`}
       >
-        <div className="z-10 w-4/12 h-full flex flex-col justify-around items-center">
-          <div className="w-full h-2/3 flex flex-col justify-center items-center  px-5 ">
-            <h1
-              className={`2xl:text-6xl lg:text-5xl text-4xl lg:mt-32 font-extralight text-center text-${
-                xpoThemes[theme].themeHomeNavbarColor
-              } opacity-0 ${!startTheme ? "themeItem" : ""}`}
-            >
-              {weeklySlides[0].name}
-            </h1>
-            <div className=" lg:w-96  flex  items-center lg:mt-2">
-              <h4
-                className={`2xl:text-2xl 2xl:ml-2 lg:text-lg lg:ml-12 text-${
-                  xpoThemes[theme].themeHomeNavbarColor
-                }
-               lg:mr-10 font-light opacity-0 ${!startTheme ? "themeItem" : ""}`}
-              >
-                by
-              </h4>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://foundation.app/@aurorae"
-              >
-                <button
-                  className={`flex w-auto items-center justify-center arrowContainerRight opacity-0  ${
-                    !startTheme ? "themeItem" : ""
-                  }`}
+        <div className="z-10 w-5/12 h-full flex flex-col justify-around items-center">
+          <div className="w-full h-2/3 flex flex-col justify-center items-center  lg:pr-20">
+            {weeklySlides[current].locked ? (
+              <h1 className="lg:text-5xl text-black  lg:mt-32 2xl:px-40 lg:px-20">
+                Coming Soon...
+              </h1>
+            ) : (
+              <>
+                <h1
+                  className={`2xl:text-6xl lg:text-5xl text-4xl lg:mt-32 font-extralight text-center text-${
+                    xpoThemes[theme].themeHomeNavbarColor
+                  } opacity-0 ${!startTheme ? "themeItem" : ""}`}
                 >
-                  <img
-                    className=" 2xl:w-72  2xl:h-20 lg:w-56 lg:h-16 lg:-mr-9 -mr-12
+                  {weeklySlides[0].name}
+                </h1>
+                <div className=" lg:w-96  flex  items-center lg:mt-2">
+                  <h4
+                    className={`2xl:text-2xl 2xl:ml-2 lg:text-lg lg:ml-12 text-${
+                      xpoThemes[theme].themeHomeNavbarColor
+                    }
+               lg:mr-10 font-light opacity-0 ${!startTheme ? "themeItem" : ""}`}
+                  >
+                    by
+                  </h4>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://foundation.app/@aurorae"
+                  >
+                    <button
+                      className={`flex w-auto items-center justify-center arrowContainerRight opacity-0  ${
+                        !startTheme ? "themeItem" : ""
+                      }`}
+                    >
+                      <img
+                        className=" 2xl:w-72  2xl:h-20 lg:w-56 lg:h-16 lg:-mr-9 -mr-12
                     arrowContainerRight"
-                    src={xpoThemes[theme].themeNFTArtistBtn}
-                    alt="Artist's NFT platform redirect button"
-                  />
-                  <div>
-                    <img
-                      className="2xl:w-5 w-5 2xl:h-7 h-5 arrowRight "
-                      src={xpoThemes[theme].themeNFTArtistBtnArrow}
-                      alt="button arrow"
-                    />
-                  </div>
-                </button>
-              </a>
-            </div>
-
-            {/* <h1 className="lg:text-5xl text-black">Coming Soon...</h1> */}
+                        src={xpoThemes[theme].themeNFTArtistBtn}
+                        alt="Artist's NFT platform redirect button"
+                      />
+                      <div>
+                        <img
+                          className="2xl:w-5 w-5 2xl:h-7 h-5 arrowRight "
+                          src={xpoThemes[theme].themeNFTArtistBtnArrow}
+                          alt="button arrow"
+                        />
+                      </div>
+                    </button>
+                  </a>
+                </div>
+              </>
+            )}
           </div>
+
           <div
             className={`w-full h-1/3 flex flex-col justify-center ${
               current === 0 ? "invisible" : "visible"

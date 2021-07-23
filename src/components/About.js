@@ -8,8 +8,8 @@ const About = ({ xpoThemes, theme }) => {
       >
         <div className="w-full h-full nftxpo_logo_container flex flex-col items-center justify-center">
           <img
-            className="2xl:w-6/12 2xl:h-auto  lg:w-96 object-cover"
-            src={xpoThemes[theme].themeLogo} /* "../assets/NFTXPOLogo.png" */
+            className="2xl:w-6/12 2xl:h-auto  lg:h-auto lg:w-96 w-64 h-full my-14  object-cover"
+            src={xpoThemes[theme].themeLogo}
             alt=""
           />
         </div>
@@ -123,11 +123,16 @@ const About = ({ xpoThemes, theme }) => {
       {/* About the theme */}
       <div
         className="lg:flex-row 2xl:h-screen lg:h-screen relative
-      w-full h-full  flex flex-col items-center z-10 "
+      w-full h-full py-10 flex flex-col items-center z-10 "
       >
         <img
-          className="absolute w-full h-full object-fill "
+          className="absolute w-full h-full object-fill hidden lg:block"
           src={xpoThemes[theme].themeAboutBG}
+          alt="ethereal background"
+        />
+        <img
+          className="absolute w-full h-full object-fill lg:hidden block "
+          src={xpoThemes[theme].themeBG}
           alt="ethereal background"
         />
         <div
@@ -139,12 +144,12 @@ const About = ({ xpoThemes, theme }) => {
             src={xpoThemes[theme].themeAboutTitle}
             alt=""
             className="lg:mt-0 lg:mb-0 
-           2xl:w-3/5 w-96 h-auto z-10  mt-10 -mb-5 "
+           2xl:w-3/5 w-96 h-auto z-10  mt-10 -mb-5 lg:block hidden"
           />
         </div>
         <div
           className=" lg:w-3/6 
-        w-full h-full flex flex-col justify-center items-center p-5 z-10"
+        w-full h-full flex flex-col lg:justify-center justify-around items-center p-5 z-10"
         >
           <h2
             className={`2xl:text-8xl lg:text-7xl text-6xl font-semibold text-white stroke-current mb-10 z-10 ${xpoThemes[theme].themeStrokeColor}`}

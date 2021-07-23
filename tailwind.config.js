@@ -16,6 +16,9 @@ module.exports = {
         dreamPurple: "#4600A4",
         dreamLightPurple: "#C888BF",
       },
+      fontSize: {
+        xxxx: "20rem",
+      },
     },
   },
   variants: {

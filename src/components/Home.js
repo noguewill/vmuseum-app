@@ -38,13 +38,13 @@ const Home = ({ xpoThemes, theme, setTheme }) => {
           <div className=" w-full   z-10">
             <h4
               className={`2xl:text-2xl lg:widestxl
-           text-base font-medium text-center dirtGold tracking-widestxl text-white ${xpoThemes[theme].themeSubStrokeColor}`}
+           text-base font-medium text-center dirtGold tracking-widestxl text-${xpoThemes[theme].themeMainColor} `}
             >
               THIS WEEK'S THEME:
             </h4>
             <h1
               className={`2xl:text-9xl lg:text-8xl
-          text-6xl font-semibold  text-white text-center tracking-widest ${xpoThemes[theme].themeStrokeColor}`}
+              text-6xl font-semibold  text-white text-center tracking-widest ${xpoThemes[theme].themeStrokeColor} themeHeader opacity-0 `}
             >
               <button
                 className={`${xpoThemes[theme].themeStrokeColor} `}
@@ -55,12 +55,17 @@ const Home = ({ xpoThemes, theme, setTheme }) => {
             </h1>
           </div>
 
-          <div className="bg-black lg:items-end lg:mr-16 w-full flex lg:flex-row flex-col justify-center items-center self-center cursor-pointer z-10">
+          <div className="lg:items-end lg:mr-16 w-full flex lg:flex-row flex-col justify-center items-center self-center cursor-pointer z-10">
             <Button xpoThemes={xpoThemes} theme={theme} />
-            <Scroll className="w-1/6" to="about" spy={true} smooth={true}>
-              <div className="bg-indigo-400 flex flex-col lg:w-auto w-full h-full items-center mb-5 arrowContainerDown ">
+            <Scroll
+              className="lg:w-1/6 w-2/6 lg:my-0 mt-5"
+              to="about"
+              spy={true}
+              smooth={true}
+            >
+              <div className="flex flex-col lg:w-auto w-full h-full items-center mb-5 arrowContainerDown ">
                 <h3
-                  className={`2xl:text-2xl lg:text-base text-sm   w-full tracking-widestxl text-${xpoThemes[theme].themeMainColor}`}
+                  className={`2xl:text-2xl lg:text-base text-sm  text-center w-full tracking-widestxl text-${xpoThemes[theme].themeMainColor}`}
                 >
                   scroll to <b>about</b>
                 </h3>

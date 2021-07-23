@@ -86,7 +86,7 @@ const xpoThemes = [
         artistName: "Aurorae",
         artistNameTitle: "../assets/etherealAssets/etherealArtistName.png",
         nftTitle: "Narcissus 2.0",
-        nftAssetTitle: "Narcissus 2.0 Pre-render",
+        nftAssetTitle: ["Flower", "Back View", "Narcissus 2.0 Pre-render"],
         socialMediaIcon: {
           function() {
             return (
@@ -140,7 +140,6 @@ const xpoThemes = [
     themeNFTWeeklyNumColor: "pink-400",
     themeNFTWeeklyNum: "2",
     themeNFTWeeklyArrowColor: "black",
-    themeNFTAssetName: ["Front-view", "Side-view"],
 
     /* End of coloring  */
     themeLogo: "../assets/dreamAssets/dreamLogoAbout.png",
@@ -197,25 +196,97 @@ const xpoThemes = [
   },
   {
     themeName: "VOID",
-    themeBG: "../assets/mediumRes/etherealMed.jpg",
-    themeMainColor: "",
-    themeContrastColor: "",
-    themeAccentColor: "",
-    themeLogo: "",
-    themeBtnNFT: "",
-    themeAbout: "",
-    themeNFT: "",
-    themePlaceHolderNFT: "",
+    themeBG: "../assets/voidAssets/voidBG.jpg",
+    themeMainColor: "white",
+    themeContrastColor: "black",
+    themeStrokeColor: "red-700",
+    themeSubStrokeColor: "red-700",
+    themeAccentColor: [
+      "dirtGold",
+      "#319900",
+      "natureSoftGreen",
+      "natureHardGreen",
+      "#274d16",
+    ],
+    /* Coloring of the elements */
+    themeHomeLogoColor: "white",
+    themeHomeLogoStroke: "#990802",
+    themeHomeNavbarColor: "white",
+    themeHomeNavBarStrokeColor: "",
+    themeHomeScrollColor: "white",
+    themeAboutUsColor: "red-700" /* and process too */,
+    themeAboutParaColor: "white",
+    themeAboutStrokeColor: "red-700",
+    themeFooterIconColor: "#990802",
+    themeFooterScrollColor: "#990802",
+    themeNFTODNavColor: "#990802",
+    themeNFTODTitleColor: "white",
+    themeNFTODBGCryptoColor: "white",
+    themeNFTODScrollColor: "white",
+    themeNFTODPriceColor: "white",
+    themeNFTODCryptoColor: "red-700",
+    themeNFTODCryptoIconColor: "#990802",
+    themeNFTDescSocialColor: "#990802",
+    themeNFTDescToolIconColor: "#990802",
+    themeNFTDescSlideBGColor: "red-700",
+    themeNFTDescBGColor: "black",
+    themeNFTParaColor: "white",
+    themeNFTSliderDotColor: "red-700",
+    themeMenuBGColor: "red-700",
+    themeNFTWeeklyNumColor: "red-700",
+    themeNFTWeeklyNum: "3",
+    themeNFTWeeklyArrowColor: "white",
+
+    /* End of coloring  */
+    themeLogo: "../assets/voidAssets/voidAboutLogo.png",
+    themeBtnNFT: [
+      "../assets/voidAssets/voidNFTBtn1.webp",
+      "../assets/voidAssets/voidNFTBtn2.webp",
+    ],
+
+    themeAboutTitle: "../assets/voidAssets/voidAboutHeader.png",
+    themeAboutBG: "../assets/voidAssets/voidAboutBG.png",
+    themeLatinName: "void | 'vòid",
+    themeAboutDesc:
+      "Void is brought into the spotlight, to represent not only the vaccum that it manifests, but what can absence of one thing make others that much more powerful; void can be everything and nothing, a feeling, a sensation, emptiness, something that has lost it’s meaning.",
+    themeNFT: "../assets/voidAssets/voidNFT.jpg",
+    themePlaceHolderNFT: "../assets/voidAssets/voidNFTPlaceholder.jpg",
+    themeNFTArtistBtn: "../assets/voidAssets/voidArtistBtn.png",
+    themeNFTArtistBtnArrow: "../assets/voidAssets/voidArtistBtnArrow.png",
+    themeNFTPriceCrypto: "1.00 ETH",
+    themeNFTPriceDollar: " ($2,500,00 USD)",
+    nftAssets: [
+      {
+        img: "../assets/voidAssets/voidNFTAsset.jpg",
+      },
+      {
+        img: "../assets/voidAssets/voidNFTAsset2.jpg",
+      },
+    ],
     themeNFTDesc: [
       {
-        story: "",
+        story:
+          "This piece is totally different from the other ones that i generally create, if the others are more a personal point of view this one wants to be a critic towards the society and how much importance is given to the beuty world, especially by the media side, that want to make you feel ugly and inadequate. The media are forcing people to be good looking, and not caring about the interiority, the mind, of a person, creating creatures that are empty inside.",
         tools: "",
-        desc: "",
-        social: "",
-        signature: "",
-        behind: "",
-        nftAssets: "",
-        artistName: "",
+        desc: "“We live in the fake. We walk in the void of ours souls trying to find THE beauty.?We need the opposite. We need real beauty. ?We need Art.”",
+        social: "https://instagram.com/@cateloo",
+        signature: "../assets/voidAssets/voidArtistSignature.png",
+        myth: "Catelloo is an Italian 3D artist based in Naples that creates intresting art pieces using 3D programs like Cinema 4D and mixing them with Photoshop, to give a more personal touch.? His artworks are mostly based on a surreal aesthetic where the faces of the characters are always cut in half, without any expression; by making them faceless the artist can express the missing of something, the character’s emptiness, the void inside of them.",
+        storyBehindTitle: "../assets/voidAssets/voidBehindHeader.png",
+        descTitle: "../assets/voidAssets/voidDescHeader.png",
+        mythTitle: "../assets/voidAssets/voidAristHeader.png",
+        toolsTitle: "../assets/voidAssets/voidToolsHeader.png",
+        artistName: "Cateloo",
+        artistNameTitle: "../assets/voidAssets/voidArtistName.png",
+        nftTitle: "VACUE.png",
+        nftAssetTitle: ["Vogue's graphic inspo", "Face closeup"],
+        socialMediaIcon: {
+          function() {
+            return (
+              <Foundation iconSize={"2xl:w-20 lg:w-14 2xl:h-20 lg:h-14"} />
+            );
+          },
+        },
       },
     ],
   },
