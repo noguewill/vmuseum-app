@@ -40,7 +40,7 @@ const Menu = ({ theme }) => {
             id={index}
             href={item.href}
             onClick={() => onTitleClick(index)}
-            className={`${active}  2xl:text-2xl   text-center hover:underline pb-1 px-5 hover:text-yellow-400 transition ease font-light tracking-widestxxl"`}
+            className={`${active}  2xl:text-2xl  text-yellow-800  text-center hover:underline pb-1 px-5 hover:text-yellow-400 transition ease font-light tracking-widestxxl"`}
           >
             {item.text}
           </button>

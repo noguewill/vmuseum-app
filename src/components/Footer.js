@@ -22,7 +22,7 @@ const Footer = ({ id, xpoThemes, theme }) => {
         <div className=" w-full  flex flex-col  items-center lg:pb-5">
           <h4 className="2xl:text-base lg:mb-2 mb-1 text-sm">find us on:</h4>
           <div className="lg:w-2/6 lg:mb-0 w-4/5 flex justify-around ">
-            <a href="https://instagram.com/__.ilariia">
+            <a href="https://twitter.com/NFT_xpo">
               <Twitter
                 color={`${xpoThemes[theme].themeFooterIconColor}`}
                 iconSize={"2xl:w-7 2xl:h-7 w-6 h-6"}
