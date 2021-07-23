@@ -79,7 +79,12 @@ const App = () => {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Home xpoThemes={xpoThemes} theme={theme} setTheme={setTheme} />
+            <Home
+              xpoThemes={xpoThemes}
+              theme={theme}
+              setTheme={setTheme}
+              loading={loading}
+            />
 
             <About xpoThemes={xpoThemes} theme={theme} />
           </Route>

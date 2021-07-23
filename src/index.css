@@ -162,10 +162,10 @@ input[type="button"]::-moz-focus-inner {
   animation: menuItemDisplay 2.2s forwards ease;
 }
 .menuItem1 {
-  animation: menuItemDisplay 2.2s forwards ease 3000ms;
+  animation: menuItemDisplay 2.2s forwards ease;
 }
 .menuItem2 {
-  animation: menuItemDisplay 2.2s forwards ease 3000ms;
+  animation: menuItemDisplay 2.2s forwards ease;
 }
 .menuItem3 {
   animation: menuItemDisplay 2.2s forwards ease;

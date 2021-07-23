@@ -2,7 +2,7 @@ import Button from "./Button";
 import NavBar from "./NavBar";
 import { Link as Scroll } from "react-scroll";
 
-const Home = ({ xpoThemes, theme, setTheme }) => {
+const Home = ({ xpoThemes, theme, setTheme, loading }) => {
   const changeTheme = () => {
     if (theme < 3) {
       setTheme(theme + 1);
@@ -20,6 +20,7 @@ const Home = ({ xpoThemes, theme, setTheme }) => {
         strokeTheme={`${xpoThemes[theme].themeHomeLogoStroke}`}
         xpoThemes={xpoThemes}
         theme={theme}
+        loading={loading}
       />
       <div
         id="home"
@@ -37,13 +38,17 @@ const Home = ({ xpoThemes, theme, setTheme }) => {
           <div className=" w-full z-10">
             <h4
               className={`2xl:text-2xl lg:widestxl
-           text-base font-medium text-center dirtGold tracking-widestxl ${xpoThemes[theme].themeMainColor} `}
+           text-base font-medium text-center dirtGold tracking-widestxl ${
+             xpoThemes[theme].themeMainColor
+           } ${!loading ? "menuItem2" : ""} `}
             >
               THIS WEEK'S THEME:
             </h4>
             <h1
               className={`2xl:text-9xl lg:text-8xl
-              text-6xl font-semibold  text-white text-center tracking-widest ${xpoThemes[theme].themeStrokeColor} `}
+              text-6xl font-semibold  text-white text-center tracking-widest ${
+                xpoThemes[theme].themeStrokeColor
+              } ${!loading ? "menuItem2" : ""} `}
             >
               {/*               <button
                 className={`${xpoThemes[theme].themeStrokeColor} `}
@@ -55,14 +60,18 @@ const Home = ({ xpoThemes, theme, setTheme }) => {
           </div>
 
           <div className="lg:items-end lg:mr-16 w-full flex lg:flex-row flex-col justify-center items-center self-center cursor-pointer z-10">
-            <Button xpoThemes={xpoThemes} theme={theme} />
+            <Button xpoThemes={xpoThemes} theme={theme} loading={loading} />
             <Scroll
               className="lg:w-1/6 w-2/6 lg:my-0 mt-5"
               to="about"
               spy={true}
               smooth={true}
             >
-              <div className="flex flex-col lg:w-auto w-full h-full items-center mb-5 arrowContainerDown themeItem3 ">
+              <div
+                className={`flex flex-col lg:w-auto w-full h-full items-center mb-5 arrowContainerDown ${
+                  !loading ? "menuItem3" : ""
+                } `}
+              >
                 <h3
                   className={`2xl:text-2xl lg:text-base text-sm  text-center w-full tracking-widestxl ${xpoThemes[theme].themeMainColor}`}
                 >

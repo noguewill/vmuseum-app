@@ -12,6 +12,7 @@ const NavBar = ({
   logoColor,
   xpoThemes,
   theme,
+  loading,
 }) => {
   const [menuActive, setMenuActive] = useState(false);
   const [hours, setHours] = useState(0);
@@ -79,7 +80,11 @@ const NavBar = ({
       {/* NAV */}
       <nav className="w-full flex justify-between items-center absolute z-30 2xl:px-10 px-3 mt-5 lg:px-8">
         <div className=" w-30">
-          <button className="block w-full h-full cursor-pointer">
+          <button
+            className={`block w-full h-full cursor-pointer ${
+              !loading ? "menuItem1" : ""
+            } `}
+          >
             <Link to="/">
               <div
                 className={`lg:text-4xl flex flex-col justify-center text-2xl font-semibold menuItem text-${logoColor} ${strokeTheme}`}
@@ -91,7 +96,9 @@ const NavBar = ({
           </button>
         </div>
         <div
-          className={`lg:ml-24 flex flex-col items-center  w-auto ${timer} ${navColor} text-white`}
+          className={`lg:ml-24 flex flex-col items-center  w-auto ${timer} ${navColor} text-white ${
+            !loading ? "menuItem2" : ""
+          } `}
         >
           {/* When less than 1280px */}
           <h6 className="text-sm short-text block">NEXT NFT</h6>
@@ -106,7 +113,11 @@ const NavBar = ({
         </div>
         <ul>
           {/* Social Media icons */}
-          <div className=" lg:w-44  w-10 h-24 flex justify-between items-center z-30">
+          <div
+            className={`lg:w-44  w-10 h-24 flex justify-between items-center z-30 ${
+              !loading ? "menuItem3" : ""
+            } `}
+          >
             <li>
               <a
                 href="https://www.instagram.com/nftxpo/"
