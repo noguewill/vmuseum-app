@@ -56,7 +56,7 @@ const App = () => {
     countdownTimeStart();
     const loader = setTimeout(() => {
       setLoading(false);
-    }, 4000);
+    }, 3000);
     return () => {
       clearTimeout(loader);
     };
@@ -64,38 +64,39 @@ const App = () => {
 
   return (
     <>
-      {loading ? (
-        <div className="absolute w-screen h-screen flex flex-col justify-center items-center">
-          <img
-            className="w-40 h-40"
-            src="../assets/etherealAssets/etherealLogoAbout.png"
-            alt=""
-          />
-          <BarLoader color={"#946a00"} loading={loading} css={""} size={150} />
-        </div>
-      ) : (
-        <Router>
-          <Switch>
-            <Route exact path="/">
-              <Home xpoThemes={xpoThemes} theme={theme} setTheme={setTheme} />
+      <div
+        className={`absolute w-screen h-screen flex flex-col justify-center items-center 
+        ${loading ? "block" : "hidden"} bg-white z-50`}
+      >
+        <img
+          className="w-24 h-20 mb-5"
+          src="../assets/etherealAssets/nftxpoLogo.png"
+          alt=""
+        />
+        <BarLoader color={"#946a00"} loading={loading} css={""} size={150} />
+      </div>
 
-              <About xpoThemes={xpoThemes} theme={theme} />
-            </Route>
-            <Route path="/NFToftheday">
-              <NFTday xpoThemes={xpoThemes} theme={theme} />
-            </Route>
-            <Route path="/NFTweekly">
-              <NFTWeekly
-                hours={hours}
-                minutes={minutes}
-                seconds={seconds}
-                xpoThemes={xpoThemes}
-                theme={theme}
-              />
-            </Route>
-          </Switch>
-        </Router>
-      )}
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home xpoThemes={xpoThemes} theme={theme} setTheme={setTheme} />
+
+            <About xpoThemes={xpoThemes} theme={theme} />
+          </Route>
+          <Route path="/NFToftheday">
+            <NFTday xpoThemes={xpoThemes} theme={theme} />
+          </Route>
+          <Route path="/NFTweekly">
+            <NFTWeekly
+              hours={hours}
+              minutes={minutes}
+              seconds={seconds}
+              xpoThemes={xpoThemes}
+              theme={theme}
+            />
+          </Route>
+        </Switch>
+      </Router>
     </>
   );
 };

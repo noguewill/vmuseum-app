@@ -5,10 +5,8 @@ import { Link as Scroll } from "react-scroll";
 const Home = ({ xpoThemes, theme, setTheme }) => {
   const changeTheme = () => {
     if (theme < 3) {
-      console.log(theme);
       setTheme(theme + 1);
     } else if (theme === 3) {
-      console.log("shit");
       setTheme((theme = 0));
     }
   };
@@ -28,14 +26,15 @@ const Home = ({ xpoThemes, theme, setTheme }) => {
         className="w-full h-auto flex items-center justify-center "
       >
         <img
+          loading="lazy"
           className="absolute w-full h-full object-cover "
           src={xpoThemes[theme].themeBG}
-          alt="ethereal theme background"
+          alt="../assets/etherealAssets/etherealBGMin.jpg"
         />
 
         <div className=" w-full h-screen flex flex-col justify-between ">
           <div className="w-full  h-7"></div>
-          <div className=" w-full   z-10">
+          <div className=" w-full z-10">
             <h4
               className={`2xl:text-2xl lg:widestxl
            text-base font-medium text-center dirtGold tracking-widestxl ${xpoThemes[theme].themeMainColor} `}
@@ -44,7 +43,7 @@ const Home = ({ xpoThemes, theme, setTheme }) => {
             </h4>
             <h1
               className={`2xl:text-9xl lg:text-8xl
-              text-6xl font-semibold  text-white text-center tracking-widest ${xpoThemes[theme].themeStrokeColor}   `}
+              text-6xl font-semibold  text-white text-center tracking-widest ${xpoThemes[theme].themeStrokeColor} `}
             >
               {/*               <button
                 className={`${xpoThemes[theme].themeStrokeColor} `}
@@ -63,7 +62,7 @@ const Home = ({ xpoThemes, theme, setTheme }) => {
               spy={true}
               smooth={true}
             >
-              <div className="flex flex-col lg:w-auto w-full h-full items-center mb-5 arrowContainerDown ">
+              <div className="flex flex-col lg:w-auto w-full h-full items-center mb-5 arrowContainerDown themeItem3 ">
                 <h3
                   className={`2xl:text-2xl lg:text-base text-sm  text-center w-full tracking-widestxl ${xpoThemes[theme].themeMainColor}`}
                 >

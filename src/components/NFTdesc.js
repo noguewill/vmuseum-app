@@ -50,7 +50,7 @@ const NFTdesc = ({ theme }) => {
         </div>
 
         {/* asset carousel */}
-        <div className="w-1/3  flex flex-col pt-10 justify-center items-center">
+        <div className="w-1/3 h-5/6  flex flex-col pt-10 justify-center items-center">
           <ImageSlider theme={theme} />
         </div>
 

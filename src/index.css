@@ -161,6 +161,16 @@ input[type="button"]::-moz-focus-inner {
 .menuItem {
   animation: menuItemDisplay 2.2s forwards ease;
 }
+.menuItem1 {
+  animation: menuItemDisplay 2.2s forwards ease 3000ms;
+}
+.menuItem2 {
+  animation: menuItemDisplay 2.2s forwards ease 3000ms;
+}
+.menuItem3 {
+  animation: menuItemDisplay 2.2s forwards ease;
+}
+
 .menuOpenAnim {
   width: 20rem;
   transition: all 0.5s;
@@ -179,6 +189,7 @@ input[type="button"]::-moz-focus-inner {
 .themeHeader {
   animation: opacityReveal 4s forwards ease 2s;
 }
+
 .themeItem {
   animation: opacityReveal 2s forwards ease 0.3s;
 }
@@ -283,3 +294,5 @@ input[type="button"]::-moz-focus-inner {
 .etherealGold {
   color: #946a00;
 }
+
+/* Menu item 1 */

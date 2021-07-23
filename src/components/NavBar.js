@@ -79,10 +79,10 @@ const NavBar = ({
       {/* NAV */}
       <nav className="w-full flex justify-between items-center absolute z-30 2xl:px-10 px-3 mt-5 lg:px-8">
         <div className=" w-30">
-          <button className="block w-full h-full cursor-pointer ">
+          <button className="block w-full h-full cursor-pointer">
             <Link to="/">
               <div
-                className={`lg:text-4xl flex flex-col justify-center text-2xl font-semibold text-${logoColor} ${strokeTheme}`}
+                className={`lg:text-4xl flex flex-col justify-center text-2xl font-semibold menuItem text-${logoColor} ${strokeTheme}`}
               >
                 <h2 className={`-mb-3 `}>NFT</h2>
                 <h2>XPO</h2>
@@ -108,7 +108,10 @@ const NavBar = ({
           {/* Social Media icons */}
           <div className=" lg:w-44  w-10 h-24 flex justify-between items-center z-30">
             <li>
-              <a href="www.instagram.com/nftxpo" className="lg:block hidden">
+              <a
+                href="https://www.instagram.com/nftxpo/"
+                className="lg:block hidden"
+              >
                 <Instagram
                   iconSize={" 2xl:w-6 2xl:h-6 "}
                   color={`${navColor}`}
@@ -117,7 +120,7 @@ const NavBar = ({
             </li>
 
             <li>
-              <a href="www.twitter.com/nftxpo" className="lg:block hidden">
+              <a href="https://twitter.com/NFT_xpo" className="lg:block hidden">
                 <Twitter iconSize={" 2xl:w-6 2xl:h-6 "} color={`${navColor}`} />
               </a>
             </li>

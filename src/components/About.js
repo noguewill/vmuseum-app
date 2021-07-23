@@ -8,6 +8,7 @@ const About = ({ xpoThemes, theme }) => {
       >
         <div className="w-full h-full nftxpo_logo_container flex flex-col items-center justify-center">
           <img
+            loading="lazy"
             className="2xl:w-6/12 2xl:h-auto  lg:h-auto lg:w-96 w-64 h-full my-14  object-cover"
             src={xpoThemes[theme].themeLogo}
             alt=""
@@ -150,11 +151,13 @@ const About = ({ xpoThemes, theme }) => {
       w-full h-full py-10 flex flex-col items-center z-10 "
       >
         <img
+          loading="lazy"
           className="absolute w-full h-full object-fill hidden lg:block"
           src={xpoThemes[theme].themeAboutBG}
           alt="ethereal background"
         />
         <img
+          loading="lazy"
           className="absolute w-full h-full object-fill lg:hidden block "
           src={xpoThemes[theme].themeBG}
           alt="ethereal background"
@@ -165,6 +168,7 @@ const About = ({ xpoThemes, theme }) => {
         "
         >
           <img
+            loading="lazy"
             src={xpoThemes[theme].themeAboutTitle}
             alt=""
             className="lg:mt-0 lg:mb-0 

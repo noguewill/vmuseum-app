@@ -56,7 +56,7 @@ const NFTday = ({ theme }) => {
                   />
                   <div>
                     <img
-                      className="2xl:w-5 w-5 2xl:h-7 h-5 arrowRight "
+                      className="2xl:w-5 w-9/12 2xl:h-7 h-auto arrowRight "
                       src={xpoThemes[theme].themeNFTArtistBtnArrow}
                       alt="button arrow"
                     />

@@ -46,7 +46,7 @@ const Footer = ({ id, xpoThemes, theme }) => {
         <Link to={id} spy={true} smooth={true}>
           <div className="flex items-center cursor-pointer arrowContainer">
             <h3
-              className={`2xl:text-2xl lg:text-xl xs:text-base lg:mr-2 text-base font-semibold text-${xpoThemes[theme].themeAccentColor[0]} `}
+              className={`2xl:text-2xl lg:text-xl xs:text-base lg:mr-2 text-base font-semibold  `}
             >
               back to top
             </h3>
@@ -60,7 +60,7 @@ const Footer = ({ id, xpoThemes, theme }) => {
             >
               <path
                 d="M3 19h18a1.002 1.002 0 0 0 .823-1.569l-9-13c-.373-.539-1.271-.539-1.645 0l-9 13A.999.999 0 0 0 3 19z"
-                fill={`${xpoThemes[theme].themeFooterIconColor} `}
+                fill={`black`}
               />
             </svg>
           </div>
