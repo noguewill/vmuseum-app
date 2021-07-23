@@ -25,10 +25,7 @@ const Menu = ({ theme }) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const renderedItems = menuObj.map((item, index) => {
-    const active =
-      index === activeIndex
-        ? `bg-white ${xpoThemes[theme].themeMainColor}`
-        : "";
+    const active = index === activeIndex ? `bg-white text-yellow-800` : "";
     return (
       <React.Fragment key={index}>
         {/* <li className="pb-1 text-center text-dirtGold "> */}
@@ -51,7 +48,7 @@ const Menu = ({ theme }) => {
 
   return (
     <>
-      <li className="pb-1">{renderedItems}</li>
+      <li className="pb-1 text-yellow-800">{renderedItems}</li>
     </>
   );
 };
