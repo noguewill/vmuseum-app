@@ -124,7 +124,7 @@ const NFTWeekly = ({ hours, minutes, seconds, theme }) => {
         <div className="z-10 w-5/12 h-full flex flex-col justify-around items-center">
           <div className="w-full h-2/3 flex flex-col justify-center items-center  lg:pr-20">
             {weeklySlides[current].locked ? (
-              <h1 className="lg:text-5xl font-light text-black lg:mt-32 2xl:px-40 lg:px-20">
+              <h1 className="lg:text-5xl font-extralight text-black lg:mt-32 2xl:px-40 lg:px-20">
                 Coming Soon...
               </h1>
             ) : (
