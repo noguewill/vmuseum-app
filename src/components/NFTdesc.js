@@ -18,14 +18,14 @@ const NFTdesc = ({ theme }) => {
           className="2xl:justify-around
         md:w-1/3 w-full flex flex-col px-5 pt-10 justify-between items-center  "
         >
-          <div className="lg:ml-0 ml-5 self-start">
+          <div className="lg:ml-0  self-center">
             <img
               className="lg:mb-3 mb-4 lg:w-60 lg:h-auto w-52"
               src={`${xpoThemes[theme].themeNFTDesc[0].descTitle}`}
               alt=""
             />
 
-            <p className="2xl:text-xl lg:text-sm 2xl:max-w-lg lg:max-w-sm text-base lg:mb-0 mb-10">
+            <p className="2xl:text-xl lg:text-sm 2xl:max-w-lg lg:max-w-sm text-base lg:mb-0 mb-10 max-w-md">
               <i>{`${xpoThemes[theme].themeNFTDesc[0].desc}`}</i>
             </p>
           </div>
@@ -35,7 +35,7 @@ const NFTdesc = ({ theme }) => {
               src={`${xpoThemes[theme].themeNFTDesc[0].storyBehindTitle} `}
               alt=""
             />
-            <p className="2xl:text-xl lg:text-sm 2xl:max-w-lg lg:max-w-sm ">
+            <p className="2xl:text-xl lg:text-sm 2xl:max-w-lg lg:max-w-sm  max-w-md">
               {`${xpoThemes[theme].themeNFTDesc[0].story}`}
             </p>
           </div>
@@ -62,14 +62,14 @@ const NFTdesc = ({ theme }) => {
               src={`${xpoThemes[theme].themeNFTDesc[0].mythTitle}`}
               alt=""
             />
-            <p className="2xl:text-xl lg:text-sm 2xl:max-w-lg lg:max-w-sm  ">
+            <p className="2xl:text-xl lg:text-sm 2xl:max-w-lg lg:max-w-sm  max-w-md ">
               {`${xpoThemes[theme].themeNFTDesc[0].myth}`}
             </p>
           </div>
-          <div className="w-8/12   h-auto flex flex-col items-center max-w-md xl:py-0  ">
-            <div className=" w-full flex items-center max-w-xs justify-between">
+          <div className="w-8/12   h-auto flex flex-col items-center max-w-md xl:py-0 bg-gray-700  ">
+            <div className=" w-full flex items-center max-w-xs justify-between ">
               <h1
-                className={`2xl:text-5xl lg:text-3xl text-2xl lg:mb-2 text-${xpoThemes[theme].themeNFTDescIconHeaderColor}`}
+                className={`2xl:text-3xl  text-3xl lg:mb-2  text-${xpoThemes[theme].themeNFTDescIconHeaderColor}`}
               >
                 FIND
               </h1>
@@ -79,13 +79,13 @@ const NFTdesc = ({ theme }) => {
                 href="https://linktr.ee/Aurorae_"
               >
                 <img
-                  className="lg:w-36 lg:h-auto w-full h-5"
+                  className="lg:w-36 lg:h-auto w-40 h-6 lg:mb-0  mb-1"
                   src={xpoThemes[theme].themeNFTDesc[0].artistNameTitle}
                   alt=""
                 />
               </a>
               <h1
-                className={`2xl:text-5xl lg:text-3xl text-2xl lg:mb-2 text-${xpoThemes[theme].themeNFTDescIconHeaderColor}`}
+                className={`2xl:text-3xl text-3xl  lg:mb-2 text-${xpoThemes[theme].themeNFTDescIconHeaderColor}`}
               >
                 ON
               </h1>
@@ -121,7 +121,7 @@ const NFTdesc = ({ theme }) => {
             </div>
           </div>
 
-          <div className="lg:w-40 lg:h-20 w-40 h-56  mb-10 self-center flex justify-center items-center">
+          <div className="lg:w-40 lg:h-20 w-48 h-56  mb-10 self-center flex justify-center items-center lg:mr-0 lg:mt-0 mt-20 mr-6">
             <img
               src={xpoThemes[theme].themeNFTDesc[0].signature}
               alt="Artist signature"

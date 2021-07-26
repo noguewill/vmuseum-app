@@ -67,7 +67,7 @@ const NavBar = ({
         <div
           className={`${
             !menuActive ? "hidden" : ""
-          } absolute h-screen overflow-hidden flex flex-col  bg-${
+          } absolute h-screen overflow-hidden flex flex-col  lg:w-0  w-screen bg-${
             xpoThemes[theme].themeMenuBGColor
           }  z-20 self-end fullscreen 2xl:text-xl menuOpenAnim lg:bg-opacity-70 bg-opacity-100`}
         >
@@ -78,8 +78,8 @@ const NavBar = ({
       </div>
 
       {/* NAV */}
-      <nav className="w-full flex justify-between items-center absolute z-30 2xl:px-10 px-5 mt-5 lg:px-8">
-        <div className=" w-30">
+      <nav className="w-full flex justify-between items-center absolute  2xl:px-10 z-20 px-5 mt-5 lg:px-8">
+        <div className=" ">
           <button
             className={`block w-full h-full cursor-pointer ${
               !loading ? "menuItem1" : ""
@@ -87,7 +87,7 @@ const NavBar = ({
           >
             <Link to="/">
               <div
-                className={`lg:text-4xl flex flex-col justify-center text-2xl font-semibold menuItem text-${logoColor} ${strokeTheme}`}
+                className={`lg:text-4xl flex flex-col z-10 justify-center text-2xl font-semibold menuItem text-${logoColor} ${strokeTheme}`}
               >
                 <h2 className={`-mb-3 `}>NFT</h2>
                 <h2>XPO</h2>
@@ -103,7 +103,7 @@ const NavBar = ({
           {/* When less than 1280px */}
           <h6 className="text-sm short-text block">NEXT NFT</h6>
           <h4 className="text-xl font-light short-text ">
-            <b>22</b>H <b>16</b>M
+            <b>{hours}</b>H <b>{minutes}</b>M
           </h4>
           {/* 1280px or higher */}
           <h2 className="2xl:text-2xl lg:text-xl font-semibold tracking-widestxxl full-text  ">
@@ -221,7 +221,7 @@ const NavBar = ({
                 {/* MOBILE */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="lg:hidden block w-15 h-15"
+                  className="lg:hidden block w-15 h-15 z-40"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke={`${navColor}`}

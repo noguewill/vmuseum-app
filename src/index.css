@@ -141,7 +141,7 @@ input[type="button"]::-moz-focus-inner {
 #ye:hover #LineBot {
   width: 80%;
 }
-@keyframes menuOpen {
+@keyframes menuOpenLg {
   from {
     width: 0rem;
   }
@@ -172,9 +172,8 @@ input[type="button"]::-moz-focus-inner {
 }
 
 .menuOpenAnim {
-  width: 20rem;
   transition: all 0.5s;
-  animation: 0.7s forwards menuOpen ease;
+  animation: 0.7s forwards menuOpenLg ease;
 }
 
 .tracking-widestxxl {

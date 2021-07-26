@@ -160,7 +160,7 @@ const NFTWeekly = ({ hours, minutes, seconds, theme }) => {
 
                 {/* Start of button */}
                 <div
-                  className={` w-auto  flex self-start flex-col lg:ml-2 mt-5  opacity-0 z-30 ${
+                  className={` w-auto  flex self-start flex-col lg:ml-2 mt-5  opacity-0 z-10 ${
                     !startTheme ? "themeItem" : ""
                   }`}
                 >
