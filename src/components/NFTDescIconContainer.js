@@ -1,8 +1,8 @@
 import xpoThemes from "./themeData";
 const NFTDescIconContainer = ({ theme }) => {
   return (
-    <div className="w-full h-full flex justify-between items-center xl:max-w-lg">
-      <div className=" 2xl:w-44 lg:w-20 flex flex-col justify-between items-center">
+    <div className="w-full h-full flex justify-between items-center xl:max-w-lg lg:ml-0 ml-5">
+      <div className=" 2xl:w-44 w-20 flex flex-col justify-between items-center">
         <svg
           className="w-9 h-9 mb-2"
           xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,7 @@ const NFTDescIconContainer = ({ theme }) => {
 
         <h6 className="text-xs 2xl:text-lg">Pen & Paper</h6>
       </div>
-      <div className=" 2xl:w-44  lg:w-20 flex flex-col justify-between items-center">
+      <div className=" 2xl:w-44  w-20 flex flex-col justify-between items-center">
         <a className="mb-2" href="https://www.blender.org/about/">
           <svg
             className="w-9 h-9 "
@@ -54,7 +54,7 @@ const NFTDescIconContainer = ({ theme }) => {
         </a>
         <h6 className="text-xs 2xl:text-lg">Blender 3D</h6>
       </div>
-      <div className=" 2xl:w-44 lg:w-20 flex flex-col justify-between items-center">
+      <div className=" 2xl:w-44 w-20 flex flex-col justify-between items-center">
         <a
           className="mb-2"
           href="https://www.adobe.com/products/photoshop.html"
@@ -75,7 +75,7 @@ const NFTDescIconContainer = ({ theme }) => {
         </a>
         <h6 className="text-xs 2xl:text-lg">Photoshop</h6>
       </div>
-      <div className=" 2xl:w-44 lg:w-20 flex flex-col justify-between items-center">
+      <div className=" 2xl:w-44 w-20 flex flex-col justify-between items-center">
         <a className="mb-2" href="https://lightroom.adobe.com/">
           <svg
             className="w-9 h-9"

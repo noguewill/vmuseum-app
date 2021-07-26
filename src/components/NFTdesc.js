@@ -18,21 +18,21 @@ const NFTdesc = ({ theme }) => {
           className="2xl:justify-around
         md:w-1/3 w-full flex flex-col px-5 pt-10 justify-between items-center  "
         >
-          <div className="ml-5 self-start">
+          <div className="lg:ml-0 ml-5 self-start">
             <img
-              className="mb-3 lg:w-60 lg:h-auto "
+              className="lg:mb-3 mb-4 lg:w-60 lg:h-auto w-52"
               src={`${xpoThemes[theme].themeNFTDesc[0].descTitle}`}
               alt=""
             />
 
-            <p className="2xl:text-xl lg:text-sm 2xl:max-w-lg lg:max-w-sm">
+            <p className="2xl:text-xl lg:text-sm 2xl:max-w-lg lg:max-w-sm text-base lg:mb-0 mb-10">
               <i>{`${xpoThemes[theme].themeNFTDesc[0].desc}`}</i>
             </p>
           </div>
-          <div>
+          <div className="ml-5 lg:ml-0 lg:mb-0 mb-10">
             <img
-              className="mb-3 lg:w-80 lg:h-auto"
-              src={`${xpoThemes[theme].themeNFTDesc[0].storyBehindTitle}`}
+              className="lg:mb-3 mb-4 lg:w-80 lg:h-auto  w-64"
+              src={`${xpoThemes[theme].themeNFTDesc[0].storyBehindTitle} `}
               alt=""
             />
             <p className="2xl:text-xl lg:text-sm 2xl:max-w-lg lg:max-w-sm ">
@@ -41,7 +41,7 @@ const NFTdesc = ({ theme }) => {
           </div>
           <div className="w-12/12 flex flex-col items-center mb-20">
             <img
-              className="mb-5 lg:w-24 lg:h-9"
+              className="lg:mb-5  mb-10 lg:w-24 lg:h-9 w-20 h-5"
               src={xpoThemes[theme].themeNFTDesc[0].toolsTitle}
               alt=""
             />
@@ -50,15 +50,15 @@ const NFTdesc = ({ theme }) => {
         </div>
 
         {/* asset carousel */}
-        <div className="w-1/3 h-5/6  flex flex-col pt-10 justify-center items-center">
+        <div className="lg:w-1/3 lg:h-5/6  flex flex-col pt-10 justify-center items-center">
           <ImageSlider theme={theme} />
         </div>
 
         {/* right sidebar */}
         <div className="md:w-1/3 w-full flex flex-col pl-7 pt-10  2xl:justify-around justify-between items-center">
-          <div>
+          <div className="lg:mb-0 mb-10">
             <img
-              className="mb-3 lg:w-44 lg:h-auto"
+              className="lg:mb-3 lg:w-44 lg:h-auto w-40 mb-4"
               src={`${xpoThemes[theme].themeNFTDesc[0].mythTitle}`}
               alt=""
             />
@@ -67,9 +67,9 @@ const NFTdesc = ({ theme }) => {
             </p>
           </div>
           <div className="w-8/12   h-auto flex flex-col items-center max-w-md xl:py-0  ">
-            <div className="w-full flex items-center justify-between">
+            <div className=" w-full flex items-center max-w-xs justify-between">
               <h1
-                className={`2xl:text-5xl lg:text-3xl lg:mb-2 text-${xpoThemes[theme].themeNFTDescIconHeaderColor}`}
+                className={`2xl:text-5xl lg:text-3xl text-2xl lg:mb-2 text-${xpoThemes[theme].themeNFTDescIconHeaderColor}`}
               >
                 FIND
               </h1>
@@ -79,103 +79,53 @@ const NFTdesc = ({ theme }) => {
                 href="https://linktr.ee/Aurorae_"
               >
                 <img
-                  className="w-full h-7 lg:w-36 lg:h-auto"
-                  src={
-                    xpoThemes[theme].themeNFTDesc[0].artistNameTitle
-                  } /* "../assets/aurorae.png" */
+                  className="lg:w-36 lg:h-auto w-full h-5"
+                  src={xpoThemes[theme].themeNFTDesc[0].artistNameTitle}
                   alt=""
                 />
               </a>
               <h1
-                className={`2xl:text-5xl lg:text-3xl lg:mb-2 text-${xpoThemes[theme].themeNFTDescIconHeaderColor}`}
+                className={`2xl:text-5xl lg:text-3xl text-2xl lg:mb-2 text-${xpoThemes[theme].themeNFTDescIconHeaderColor}`}
               >
                 ON
               </h1>
             </div>
-            <div className="w-full h-full flex justify-between items-center ">
-              <div className=" w-50 h-16 flex flex-col justify-center items-center">
-                <a
-                  className="2xl:mt-10 lg:mb-2"
-                  href="https://foundation.app/aurorae"
-                >
-                  <Foundation iconSize={"2xl:w-20 lg:w-14 2xl:h-20 lg:h-14"} />
-                </a>
-              </div>
-              <div className=" w-50 h-16 flex flex-col justify-center items-center">
-                <a
-                  className="2xl:mt-10 lg:mb-2"
-                  href="https://twitter.com/aurorae_art"
-                >
-                  <Twitter
-                    color={xpoThemes[theme].themeNFTDescSocialColor}
-                    iconSize={"2xl:w-10 lg:w-8 2xl:h-10 lg:h-8"}
-                  />
-                </a>
-              </div>
+            <div className=" w-full h-full  max-w-xs flex lg:justify-between md:justify-around justify-between items-center ">
+              <a href="https://foundation.app/aurorae">
+                <Foundation
+                  iconSize={"2xl:w-20 lg:w-14 2xl:h-20 lg:h-14 w-14 h-auto "}
+                />
+              </a>
 
-              <div className=" w-50 h-16 flex flex-col justify-center items-center">
-                <a
-                  className="2xl:mt-10 lg:mb-2"
-                  href="https://www.instagram.com/aurorae.___/"
-                >
-                  <Instagram
-                    color={xpoThemes[theme].themeNFTDescSocialColor}
-                    iconSize={"2xl:w-10 lg:w-8 2xl:h-10 lg:h-8"}
-                  />
-                </a>
-              </div>
-              <div className=" w-50 h-16 flex flex-col justify-center items-center">
-                <a
-                  className="2xl:mt-10 lg:mb-2"
-                  href="https://rarible.com/aurorae"
-                >
-                  <img
-                    className="2xl:w-10 lg:w-8 2xl:h-10 lg:h-8"
-                    src="../assets/raribleLogo.png"
-                    alt="q"
-                  />
-                </a>
-              </div>
+              <a href="https://twitter.com/aurorae_art">
+                <Twitter
+                  color={xpoThemes[theme].themeNFTDescSocialColor}
+                  iconSize={"2xl:w-10 lg:w-8 2xl:h-10 lg:h-8 w-14 h-7"}
+                />
+              </a>
+
+              <a href="https://www.instagram.com/aurorae.___/">
+                <Instagram
+                  color={xpoThemes[theme].themeNFTDescSocialColor}
+                  iconSize={"2xl:w-10 lg:w-8 2xl:h-10 lg:h-8 w-14 h-7"}
+                />
+              </a>
+
+              <a href="https://rarible.com/aurorae">
+                <img
+                  className="2xl:w-10 lg:w-8 2xl:h-10 lg:h-8 w-7 "
+                  src="../assets/raribleLogo.png"
+                  alt="q"
+                />
+              </a>
             </div>
           </div>
 
-          <div className="lg:w-40 lg:h-20 w-72 h-56  mb-10 self-center flex justify-center items-center">
-            <img src={xpoThemes[theme].themeNFTDesc[0].signature} alt="Stuff" />
-            {/*             <svg
-              className="absolute w-56 h-56 object-cover"
-              viewBox="0 0 293 222"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M110.373 49.7766C110.522 63.5248 115.2 82.9113 110.275 95.9499C99.7687 123.76 54.0322 131.082 30.1358 119.48C2.3988 106.013 -4.84991 65.9415 8.47664 40.2269C20.208 17.5903 56.2325 -7.91182 82.8068 5.37536C103.637 15.7905 112.513 51.7703 123.172 70.4512C130.677 83.6058 161.154 133.995 173.381 98.2143C183.579 68.3749 184.802 34.2631 184.802 2.9141C184.802 -4.92519 184.802 5.32221 184.802 7.24592"
-                stroke="#FBCC45"
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M149.359 9.01807C148.769 32.6202 146.932 56.4163 148.375 80.4932C150.351 113.468 151.131 146.21 151.131 179.239C151.131 193.693 153.23 200.875 137.151 200.406C125.469 200.065 113.913 198.056 102.497 195.68C91.2277 193.336 72.6356 191.375 64.9869 181.11C48.0515 158.381 70.253 133.469 91.8639 126.962C129.462 115.64 147.923 142.507 177.713 159.057C187.941 164.739 197.927 166.958 209.611 165.161C218.047 163.863 230.471 160.195 237.571 155.316C263.823 137.274 232.893 154.086 253.914 133.066"
-                stroke="#FBCC45"
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M253.914 5.47394C249.761 17.6888 248.598 30.3624 246.629 43.0821C241.7 74.9268 236.567 106.863 226.644 137.595C217.905 164.657 207.618 191.878 202.523 219.899"
-                stroke="#FBCC45"
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M291.128 1.92969C283.726 45.1077 260.941 82.3691 250.468 124.698C244.139 150.28 235.488 174.267 225.56 198.634"
-                stroke="#FBCC45"
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg> */}
+          <div className="lg:w-40 lg:h-20 w-40 h-56  mb-10 self-center flex justify-center items-center">
+            <img
+              src={xpoThemes[theme].themeNFTDesc[0].signature}
+              alt="Artist signature"
+            />
           </div>
           <i className="-mt-20 2xl:mb-12 lg:mb-10">
             {xpoThemes[theme].themeNFTDesc[0].artistName}'s Signature

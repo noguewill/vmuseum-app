@@ -148,7 +148,7 @@ const About = ({ xpoThemes, theme }) => {
       {/* About the theme */}
       <div
         className="lg:flex-row 2xl:h-screen lg:h-screen relative
-      w-full h-full py-10 flex flex-col items-center z-10 "
+      w-full h-full lg:py-10 flex flex-col items-center z-10 "
       >
         <img
           loading="lazy"
@@ -180,7 +180,7 @@ const About = ({ xpoThemes, theme }) => {
         w-full h-full flex flex-col lg:justify-center justify-around items-center p-5 z-10"
         >
           <h2
-            className={`2xl:text-8xl lg:text-7xl text-6xl font-semibold text-white stroke-current mb-10 z-10 ${xpoThemes[theme].themeStrokeColor}`}
+            className={`2xl:text-8xl lg:text-7xl text-6xl lg:mt-0 mt-5 font-semibold text-white stroke-current mb-10 z-10 ${xpoThemes[theme].themeStrokeColor}`}
           >
             THIS WEEK
           </h2>

@@ -12,9 +12,9 @@ const WeeklyData = ({
     <>
       {/* If the x element is locked, do not re-route to nftoftheday */}
       {/*       {!weeklySlides[current].locked ?  */}
-      <div className="w-full h-screen">
+      <div className="w-full lg:h-screen h-full">
         <Link to={!weeklySlides[current].locked ? "/nftoftheday" : "#"}>
-          <div className="w-9/12 h-screen imgContainer overflow-hidden flex flex-col justify-center items-center  active">
+          <div className="lg:w-9/12  w-full lg:max-w-full max-w-lg lg:h-screen h-full imgContainer overflow-hidden flex flex-col justify-center items-center  active">
             <img
               loading="lazy"
               src={weeklySlides[current].weeklyImg}
@@ -25,11 +25,11 @@ const WeeklyData = ({
             {weeklySlides[current].locked ? (
               <>
                 <div className="w-1/3 h-screen flex flex-col justify-center items-center z-20 absolute menuItem text-white slide active">
-                  <h1 className="2xl:text-6xl 2xl:mb-10">
+                  <h1 className="2xl:text-6xl 2xl:mb-10 lg:mb-0 lg:text-base text-3xl mb-5">
                     {weeklySlides[current].name}
                   </h1>
                   <svg
-                    className="lg:w-24 lg:h-24"
+                    className="lg:w-24 lg:h-24 w-14 h-14"
                     xmlns="http://www.w3.org/2000/svg"
                     aria-hidden="true"
                     focusable="false"
@@ -41,8 +41,8 @@ const WeeklyData = ({
                       fill="white"
                     />
                   </svg>
-                  <h1 className="2xl:text-5xl 2xl:mb-1">LOCKED</h1>
-                  <h3 className="2xl:text-4xl  ">
+                  <h1 className="2xl:text-5xl 2xl:mb-1 ">LOCKED</h1>
+                  <h3 className="2xl:text-4xl  text-sm">
                     {hours}
                     <b>h :</b> {minutes}
                     <b>m :</b> {seconds}

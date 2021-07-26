@@ -15,7 +15,7 @@ const Button = ({ xpoThemes, theme, loading }) => {
                 NFT OF <br className="lg:hidden block" />
                 THE DAY
               </h1>
-              <div className="w-full 2xl:h-72  lg:h-52 h-44 col-start-1 col-end-1 row-start-1 ">
+              <div className="w-full 2xl:h-72  lg:h-52 h-36 col-start-1 col-end-1 row-start-1 ">
                 <img
                   className=" w-full h-full object-fit rounded-md"
                   src={xpoThemes[theme].themeBtnNFT[0]}
@@ -35,7 +35,7 @@ const Button = ({ xpoThemes, theme, loading }) => {
                 NFT <br className="lg:hidden block" />
                 WEEKLY
               </h1>
-              <div className="w-full 2xl:h-72  lg:h-52 h-44 col-start-1 col-end-1 row-start-1 ">
+              <div className="w-full 2xl:h-72  lg:h-52 h-36 col-start-1 col-end-1 row-start-1 ">
                 <img
                   className=" w-full h-full object-fit rounded-md"
                   src={xpoThemes[theme].themeBtnNFT[1]}

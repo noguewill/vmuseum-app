@@ -27,9 +27,9 @@ const NFTday = ({ theme }) => {
           alt="ethereal background"
         />
         <div className=" lg:w-3/6 lg:ml-5  w-full h-screen flex  items-center z-10">
-          <div className=" w-auto mb-40 flex flex-col ml-2">
+          <div className=" w-auto lg:mb-40 flex flex-col lg:ml-2  ml-5 mb-72">
             <h1
-              className={`2xl:text-6xl lg:text-5xl text-4xl font-light max-w-sm text-${xpoThemes[theme].themeNFTODTitleColor}`}
+              className={`2xl:text-6xl lg:text-5xl text-4xl font-light max-w-sm  text-${xpoThemes[theme].themeNFTODTitleColor}`}
             >
               {xpoThemes[theme].themeNFTDesc[0].nftTitle}
             </h1>
@@ -49,14 +49,14 @@ const NFTday = ({ theme }) => {
                   className={`flex w-auto items-center justify-center arrowContainerRight `}
                 >
                   <img
-                    className=" 2xl:w-72  2xl:h-20 lg:w-56 lg:h-16 lg:-mr-9 -mr-12
+                    className=" 2xl:w-72 2xl:h-20 lg:w-56 lg:h-16 w-40 h-12 lg:-mr-9 -mr-12
                     arrowContainerRight"
                     src={xpoThemes[theme].themeNFTArtistBtn}
                     alt="Artist's NFT platform redirect button"
                   />
                   <div>
                     <img
-                      className="2xl:w-5 w-9/12 2xl:h-7 h-auto arrowRight "
+                      className="2xl:w-5 lg:w-9/12 2xl:h-7 lg:h-auto lg:ml-0 w-3 h-4 ml-6 arrowRight "
                       src={xpoThemes[theme].themeNFTArtistBtnArrow}
                       alt="button arrow"
                     />
@@ -68,7 +68,7 @@ const NFTday = ({ theme }) => {
         </div>
       </div>
       <div
-        className={`w-full 2xl:h-12 h-8 bg-black text-${xpoThemes[theme].themeNFTODPriceColor} flex px-5 justify-between items-center z-10 2xl:text-xl`}
+        className={`w-full 2xl:h-12 h-8 bg-black text-${xpoThemes[theme].themeNFTODPriceColor} flex lg:px-5  px-2 justify-between items-center z-10 2xl:text-xl`}
       >
         <div className="w-auto flex items-center">
           <svg
@@ -84,9 +84,9 @@ const NFTday = ({ theme }) => {
               fill={xpoThemes[theme].themeNFTODCryptoIconColor}
             />
           </svg>
-          <h3>
+          <h3 className="lg:text-base text-sm">
             Price
-            <span className={`text-yellow-400`}>
+            <span className={`ml-1 text-yellow-400 lg:text-base text-sm`}>
               {xpoThemes[theme].themeNFTPriceCrypto}
             </span>
             <span className="font-light">
@@ -102,9 +102,9 @@ const NFTday = ({ theme }) => {
             smooth={true}
           >
             <h3
-              className={`mr-2 text-${xpoThemes[theme].themeNFTODScrollColor}`}
+              className={`mr-2 text-${xpoThemes[theme].themeNFTODScrollColor} `}
             >
-              scroll to <b>description</b>
+              scroll to<b> description</b>
             </h3>
             <svg
               className={` arrowDown`}

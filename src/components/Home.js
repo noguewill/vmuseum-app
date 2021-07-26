@@ -15,7 +15,7 @@ const Home = ({ xpoThemes, theme, setTheme, loading }) => {
     <>
       <NavBar
         logoColor={`${xpoThemes[theme].themeHomeLogoColor}`}
-        navColor={`${xpoThemes[theme].themeHomeNavbarColor}`}
+        navColor={`#946a00`}
         textColor={`${xpoThemes[theme].themeHomeNavbarColor}`}
         strokeTheme={`${xpoThemes[theme].themeHomeLogoStroke}`}
         xpoThemes={xpoThemes}
@@ -62,13 +62,13 @@ const Home = ({ xpoThemes, theme, setTheme, loading }) => {
           <div className="lg:items-end lg:mr-16 w-full flex lg:flex-row flex-col justify-center items-center self-center cursor-pointer z-10">
             <Button xpoThemes={xpoThemes} theme={theme} loading={loading} />
             <Scroll
-              className="lg:w-1/6 w-2/6 lg:my-0 mt-5"
+              className="lg:w-1/6  w-full lg:my-0 mt-5"
               to="about"
               spy={true}
               smooth={true}
             >
               <div
-                className={`flex flex-col lg:w-auto w-full h-full items-center mb-5 arrowContainerDown ${
+                className={` flex flex-col lg:w-auto w-full h-full items-center mb-5 arrowContainerDown ${
                   !loading ? "menuItem3" : ""
                 } `}
               >

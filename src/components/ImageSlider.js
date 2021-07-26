@@ -64,7 +64,7 @@ const ImageSlider = ({ theme }) => {
                 {xpoThemes[theme].themeNFTDesc[0].nftAssetTitle[current]}
               </h1>
             </div>
-            <div className="2xl:w-1/12 flex justify-between mb-4">
+            <div className="w-1/12  lg:w-2/12 flex justify-between mb-4">
               {carouselDot()}
             </div>
           </div>

@@ -69,7 +69,7 @@ const NavBar = ({
             !menuActive ? "hidden" : ""
           } absolute h-screen overflow-hidden flex flex-col  bg-${
             xpoThemes[theme].themeMenuBGColor
-          } bg-opacity-70 z-20 self-end fullscreen 2xl:text-xl menuOpenAnim  `}
+          }  z-20 self-end fullscreen 2xl:text-xl menuOpenAnim lg:bg-opacity-70 bg-opacity-100`}
         >
           <ul className=" flex flex-col pt-40  justify-around items-center ">
             <Menu xpoThemes={xpoThemes} theme={theme} />
@@ -78,7 +78,7 @@ const NavBar = ({
       </div>
 
       {/* NAV */}
-      <nav className="w-full flex justify-between items-center absolute z-30 2xl:px-10 px-3 mt-5 lg:px-8">
+      <nav className="w-full flex justify-between items-center absolute z-30 2xl:px-10 px-5 mt-5 lg:px-8">
         <div className=" w-30">
           <button
             className={`block w-full h-full cursor-pointer ${
@@ -137,7 +137,10 @@ const NavBar = ({
             </li>
 
             <li>
-              <button onClick={() => setMenuActive(!menuActive)}>
+              <button
+                className="w-10 h-10"
+                onClick={() => setMenuActive(!menuActive)}
+              >
                 {!menuActive ? (
                   <svg
                     id="ye"

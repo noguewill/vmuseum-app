@@ -1,19 +1,18 @@
-import Logo from "./icons/Logo";
 import Twitter from "./icons/Twitter";
 import Instagram from "./icons/Instagram";
 import { Link } from "react-scroll";
 
 const Footer = ({ id, xpoThemes, theme }) => {
   return (
-    <div className="w-full h-72 flex justify-around items-center  mt-5 px-5">
+    <div className="w-full lg:h-72 h-56 flex justify-around items-center  mt-5 lg:px-5 px-2">
       <div className="w-full h-full  flex flex-col justify-between">
         <div
-          className={` lg:text-4xl w-2/12 flex flex-col justify-center items-center text-2xl font-semibold text-black`}
+          className={` lg:text-4xl w-2/12 flex ml-4 flex-col justify-center items-center text-2xl font-semibold text-black`}
         >
           <h2 className={`-mb-3 `}>NFT</h2>
           <h2>XPO</h2>
         </div>
-        <h4 className="text-sm font-light"> © NFTXPO 2021</h4>
+        <h4 className="lg:text-sm text-xs font-light"> © NFTXPO 2021</h4>
       </div>
       <div className=" w-full h-full  flex flex-col justify-around items-center pt-10 ">
         <div className="flex flex-col items-center">
@@ -24,19 +23,19 @@ const Footer = ({ id, xpoThemes, theme }) => {
             <a href="mailto:nftxpo@gmail.com">nftxpo@gmail.com</a>
           </h3>
         </div>
-        <div className=" w-full  flex flex-col  items-center lg:pb-5">
+        <div className=" w-full  flex flex-col  items-center lg:pb-5 pb-10">
           <h4 className="2xl:text-base lg:mb-2 mb-1 text-sm">find us on:</h4>
           <div className="lg:w-2/6 lg:mb-0 w-4/5 flex justify-around ">
             <a href="https://twitter.com/NFT_xpo">
               <Twitter
                 color={`${xpoThemes[theme].themeFooterIconColor}`}
-                iconSize={"2xl:w-7 2xl:h-7 w-6 h-6"}
+                iconSize={"2xl:w-7 2xl:h-7 lg:w-6 lg:h-6 w-5 h-5"}
               />
             </a>
             <a href="https://www.instagram.com/nftxpo/">
               <Instagram
                 color={`${xpoThemes[theme].themeFooterIconColor}`}
-                iconSize={"2xl:w-7 2xl:h-7 w-6 h-6"}
+                iconSize={"2xl:w-7 2xl:h-7 lg:w-6 lg:h-6 w-5 h-5"}
               />
             </a>
           </div>
@@ -46,7 +45,7 @@ const Footer = ({ id, xpoThemes, theme }) => {
         <Link to={id} spy={true} smooth={true}>
           <div className="flex items-center cursor-pointer arrowContainer">
             <h3
-              className={`2xl:text-2xl lg:text-xl xs:text-base lg:mr-2 text-base font-semibold  `}
+              className={`2xl:text-2xl lg:text-xl lg:mr-2 text-sm font-semibold  `}
             >
               back to top
             </h3>
