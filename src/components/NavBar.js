@@ -67,7 +67,7 @@ const NavBar = ({
         <div
           className={`${
             !menuActive ? "hidden" : ""
-          } absolute h-screen overflow-hidden flex flex-col  lg:w-0  w-screen bg-${
+          } absolute h-screen overflow-hidden flex flex-col   bg-${
             xpoThemes[theme].themeMenuBGColor
           }  z-20 self-end fullscreen 2xl:text-xl menuOpenAnim lg:bg-opacity-70 bg-opacity-100`}
         >

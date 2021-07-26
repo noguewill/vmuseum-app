@@ -149,6 +149,14 @@ input[type="button"]::-moz-focus-inner {
     width: 20rem;
   }
 }
+@keyframes menuOpen {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
 @keyframes menuItemDisplay {
   from {
     opacity: 0;
@@ -175,7 +183,10 @@ input[type="button"]::-moz-focus-inner {
   transition: all 0.5s;
   animation: 0.7s forwards menuOpenLg ease;
 }
-
+.menuOpenAnimMobile {
+  transition: all 0.5s;
+  animation: 0.7s forwards menuOpen ease;
+}
 .tracking-widestxxl {
   letter-spacing: 0.5rem;
 }

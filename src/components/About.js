@@ -159,7 +159,7 @@ const About = ({ xpoThemes, theme }) => {
         <img
           loading="lazy"
           className="absolute w-full h-full object-fill lg:hidden block "
-          src={xpoThemes[theme].themeBG}
+          src="../assets/etherealAssets/etherealAboutMobileBG.jpg"
           alt="ethereal background"
         />
         <div
@@ -173,6 +173,13 @@ const About = ({ xpoThemes, theme }) => {
             alt=""
             className="lg:mt-0 lg:mb-0 
            2xl:w-3/5 w-96 h-auto z-10  mt-10 -mb-5 lg:block hidden"
+          />
+          <img
+            loading="lazy"
+            src="../assets/etherealAssets/etherealAboutMobileTitle.png"
+            alt=""
+            className="lg:mt-0 lg:mb-0 
+           2xl:w-3/5 w-96 h-auto z-10  mt-10 -mb-5 lg:hidden block"
           />
         </div>
         <div

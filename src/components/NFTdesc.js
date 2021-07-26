@@ -66,7 +66,7 @@ const NFTdesc = ({ theme }) => {
               {`${xpoThemes[theme].themeNFTDesc[0].myth}`}
             </p>
           </div>
-          <div className="w-8/12   h-auto flex flex-col items-center max-w-md xl:py-0 bg-gray-700  ">
+          <div className="w-8/12   h-auto flex flex-col items-center max-w-md xl:py-0  ">
             <div className=" w-full flex items-center max-w-xs justify-between ">
               <h1
                 className={`2xl:text-3xl  text-3xl lg:mb-2  text-${xpoThemes[theme].themeNFTDescIconHeaderColor}`}

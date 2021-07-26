@@ -165,7 +165,11 @@ const NFTWeekly = ({ hours, minutes, seconds, theme }) => {
                   }`}
                 >
                   {weeklySlides[current].locked ? (
-                    <h1 className=" font-extralight text-black text-4xl mx-16">
+                    <h1
+                      className={` font-light text-black  text-4xl ml-5 menuItem opacity-0 z-10 ${
+                        !startTheme ? "themeItem" : ""
+                      }`}
+                    >
                       Coming Soon...
                     </h1>
                   ) : (
@@ -277,7 +281,7 @@ const NFTWeekly = ({ hours, minutes, seconds, theme }) => {
           startTheme ? "invisible" : "visible"
         }`}
       >
-        <div className="z-10 w-5/12 h-full flex flex-col justify-around items-center">
+        <div className="z-10 w-5/12 h-full ml-5 flex flex-col justify-around items-center">
           <div className="w-full h-2/3 flex flex-col justify-center items-center  lg:pr-20">
             {weeklySlides[current].locked ? (
               <h1 className="lg:text-5xl font-extralight text-black lg:mt-32 2xl:px-40 lg:px-20">
